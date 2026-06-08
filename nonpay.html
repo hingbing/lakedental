@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <title>연세레이크치과 - 비급여 수가표</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="연세레이크치과 비급여 진료비용 안내">
+     <meta name="keywords" content="연세레이크치과, 비급여 수가표, 진료비용 안내">
+     <meta name="author" content="연세레이크치과">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+     <style>
+          body {
+               word-break: keep-all;
+               overflow-wrap: break-word;
+               color: #333333;
+               background: #f8fafc;
+          }
+
+          .price-page {
+               padding: 70px 0;
+          }
+
+          .price-hero {
+               position: relative;
+               overflow: hidden;
+               background: linear-gradient(135deg, #392679 0%, #5f45a5 100%);
+               color: #ffffff;
+               border-radius: 24px;
+               padding: 50px 38px;
+               margin-bottom: 34px;
+               box-shadow: 0 16px 36px rgba(57, 38, 121, 0.18);
+          }
+
+          .price-hero::after {
+               content: "";
+               position: absolute;
+               right: -80px;
+               top: -80px;
+               width: 220px;
+               height: 220px;
+               border-radius: 50%;
+               background: rgba(255, 255, 255, 0.1);
+          }
+
+          .price-hero span {
+               display: inline-block;
+               padding: 6px 13px;
+               border-radius: 30px;
+               border: 1px solid rgba(255, 255, 255, 0.35);
+               background: rgba(255, 255, 255, 0.12);
+               font-size: 13px;
+               font-weight: 700;
+               letter-spacing: 0.04em;
+               margin-bottom: 14px;
+          }
+
+          .price-hero h1 {
+               color: #ffffff;
+               font-size: 34px;
+               font-weight: 800;
+               margin: 0 0 14px;
+               line-height: 1.35;
+          }
+
+          .price-hero p {
+               color: rgba(255, 255, 255, 0.9);
+               font-size: 16px;
+               line-height: 1.8;
+               margin: 0;
+               max-width: 780px;
+          }
+
+          .price-card {
+               background: #ffffff;
+               border: 1px solid #e7eaf0;
+               border-radius: 20px;
+               padding: 34px;
+               margin-bottom: 26px;
+               box-shadow: 0 12px 28px rgba(30, 40, 60, 0.06);
+          }
+
+          .price-card h2 {
+               color: #392679;
+               font-size: 24px;
+               font-weight: 800;
+               margin: 0 0 18px;
+          }
+
+          .price-note {
+               border-left: 5px solid #392679;
+               background: #f5f2ff;
+               border-radius: 14px;
+               padding: 18px 20px;
+               color: #555555;
+               line-height: 1.75;
+               margin-bottom: 24px;
+          }
+
+          .update-text {
+               margin-top: 10px;
+               color: #777777;
+               font-size: 13px;
+          }
+
+          .table-wrap {
+               overflow-x: auto;
+               border-radius: 16px;
+               border: 1px solid #e7eaf0;
+          }
+
+          .price-table {
+               width: 100%;
+               min-width: 760px;
+               border-collapse: collapse;
+               background: #ffffff;
+          }
+
+          .price-table th,
+          .price-table td {
+               border-bottom: 1px solid #edf0f5;
+               border-right: 1px solid #edf0f5;
+               padding: 15px 13px;
+               font-size: 15px;
+               line-height: 1.55;
+               vertical-align: middle;
+          }
+
+          .price-table th:last-child,
+          .price-table td:last-child {
+               border-right: 0;
+          }
+
+          .price-table tr:last-child td {
+               border-bottom: 0;
+          }
+
+          .price-table th {
+               background: #faf9ff;
+               color: #392679;
+               font-weight: 800;
+               text-align: center;
+               white-space: nowrap;
+          }
+
+          .category-cell {
+               width: 15%;
+               text-align: center;
+               font-weight: 800;
+               color: #392679;
+               background: #fbfaff;
+          }
+
+          .item-cell {
+               width: 24%;
+               font-weight: 800;
+               color: #333333;
+               background: #fcfcfe;
+          }
+
+          .type-cell {
+               width: 35%;
+               color: #555555;
+          }
+
+          .price-cell {
+               width: 18%;
+               text-align: right;
+               font-weight: 900;
+               color: #222222;
+               white-space: nowrap;
+          }
+
+          .clinic-info-box {
+               display: grid;
+               grid-template-columns: repeat(2, minmax(0, 1fr));
+               gap: 12px;
+               margin-top: 24px;
+          }
+
+          .clinic-info-box p {
+               background: #fbfcff;
+               border: 1px solid #edf0f5;
+               border-radius: 12px;
+               padding: 13px 15px;
+               margin: 0;
+               color: #555555;
+               line-height: 1.6;
+          }
+
+          .clinic-info-box strong {
+               color: #392679;
+               margin-right: 6px;
+          }
+
+          .back-buttons {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+               margin-top: 26px;
+          }
+
+          .back-buttons a {
+               display: inline-block;
+               padding: 12px 20px;
+               border-radius: 9px;
+               font-weight: 800;
+               text-decoration: none;
+          }
+
+          .btn-main {
+               background: #392679;
+               color: #ffffff;
+          }
+
+          .btn-call {
+               background: #2c3e50;
+               color: #ffffff;
+          }
+
+          .btn-main:hover,
+          .btn-call:hover {
+               color: #ffffff;
+               opacity: 0.92;
+          }
+
+          @media (max-width: 767px) {
+               .price-page {
+                    padding: 42px 0;
+               }
+
+               .price-hero {
+                    padding: 34px 24px;
+                    border-radius: 18px;
+               }
+
+               .price-hero h1 {
+                    font-size: 27px;
+               }
+
+               .price-card {
+                    padding: 24px 18px;
+               }
+
+               .clinic-info-box {
+                    grid-template-columns: 1fr;
+               }
+          }
+     </style>
+</head>
+
+<body id="top">
+
+     <section class="price-page">
+          <div class="container">
+               <div class="price-hero">
+                    <span>NON-COVERED MEDICAL FEE</span>
+                    <h1>비급여 진료비용 안내</h1>
+                    <p>
+                         연세레이크치과의 비급여 진료비용 안내 페이지입니다.
+                         진료비용은 환자분의 구강 상태, 치료 범위, 사용 재료, 난이도에 따라 달라질 수 있으며,
+                         정확한 비용은 진단 후 의료진 상담을 통해 안내드립니다.
+                    </p>
+               </div>
+
+               <div class="price-card">
+                    <h2>비급여 진료비용 수가표</h2>
+
+                    <div class="price-note">
+                         아래 수가표는 홈페이지 고지용 비급여 진료비용 안내입니다.
+                         실제 치료 계획은 진단 결과와 환자분의 상태에 따라 달라질 수 있습니다.
+                         <br>
+                         <strong>※ 치아미백 등 일부 항목은 별도 표기 기준에 따라 부가세가 추가될 수 있습니다.</strong>
+                         <div class="update-text">최종 업데이트: 2026.05.21</div>
+                    </div>
+
+                    <div class="table-wrap">
+                         <table class="price-table">
+                              <thead>
+                                   <tr>
+                                        <th>진료내용</th>
+                                        <th>항목</th>
+                                        <th>종류</th>
+                                        <th>진료비용</th>
+                                   </tr>
+                              </thead>
+                              <tbody>
+                                   <tr>
+                                        <td class="category-cell" rowspan="1"></td>
+                                        <td class="item-cell" rowspan="1">스케일링</td>
+                                        <td class="type-cell">Scaling(일반)</td>
+                                        <td class="price-cell">50,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="category-cell" rowspan="4">보존진료</td>
+                                        <td class="item-cell" rowspan="4">레진<br>(Resin)</td>
+                                        <td class="type-cell">간단(교합면/협면)</td>
+                                        <td class="price-cell">100,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">인접면</td>
+                                        <td class="price-cell">150,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">Diastema(공간당)</td>
+                                        <td class="price-cell">300,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">치경부</td>
+                                        <td class="price-cell">70,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="category-cell" rowspan="8">보철진료</td>
+                                        <td class="item-cell" rowspan="2">인레이<br>(Inlay)</td>
+                                        <td class="type-cell">Hybrid Inlay(Lava)</td>
+                                        <td class="price-cell">300,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">Gold Inlay</td>
+                                        <td class="price-cell">600,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="4">크라운<br>(Crown)</td>
+                                        <td class="type-cell">Gold</td>
+                                        <td class="price-cell">800,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">PFM</td>
+                                        <td class="price-cell">600,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">지르코니아(구치부)</td>
+                                        <td class="price-cell">500,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">지르코니아(전치부)</td>
+                                        <td class="price-cell">600,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="1">라미네이트<br>(Laminate)</td>
+                                        <td class="type-cell">전치부</td>
+                                        <td class="price-cell">600,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="1">Post</td>
+                                        <td class="type-cell">Fiber</td>
+                                        <td class="price-cell">150,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="category-cell" rowspan="11">임플란트/<br>수술</td>
+                                        <td class="item-cell" rowspan="5">Implant</td>
+                                        <td class="type-cell">오스템(BA)</td>
+                                        <td class="price-cell">1,000,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">오스템(SOI)</td>
+                                        <td class="price-cell">1,200,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">임플란트 크라운</td>
+                                        <td class="price-cell">500,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">임플란트 지대주</td>
+                                        <td class="price-cell">200,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">Impl Cr(Pontic)</td>
+                                        <td class="price-cell">400,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="2">뼈이식</td>
+                                        <td class="type-cell">단순</td>
+                                        <td class="price-cell">200,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">복잡</td>
+                                        <td class="price-cell">400,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="2">상악동거상술</td>
+                                        <td class="type-cell">치조정 접근법 (치아당)</td>
+                                        <td class="price-cell">400,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">측방 접근법 (부위당)</td>
+                                        <td class="price-cell">1,000,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="2">일반수술</td>
+                                        <td class="type-cell">치근단절제술</td>
+                                        <td class="price-cell">300,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">GBR 추가</td>
+                                        <td class="price-cell">250,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="category-cell" rowspan="2">소아진료</td>
+                                        <td class="item-cell" rowspan="1">기성크라운</td>
+                                        <td class="type-cell">SS크라운</td>
+                                        <td class="price-cell">200,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="1">불소도포</td>
+                                        <td class="type-cell">전악</td>
+                                        <td class="price-cell">30,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="category-cell" rowspan="6">기타</td>
+                                        <td class="item-cell" rowspan="1">미노클린</td>
+                                        <td class="type-cell">1/4악당</td>
+                                        <td class="price-cell">20,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="2">치아미백<br>(VAT 별도)</td>
+                                        <td class="type-cell">3회(기본)</td>
+                                        <td class="price-cell">400,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="type-cell">리터치 1회당 (1년 내)</td>
+                                        <td class="price-cell">100,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="1">치은미백</td>
+                                        <td class="type-cell">치아당</td>
+                                        <td class="price-cell">50,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="1">보톡스</td>
+                                        <td class="type-cell">교근, 측두근</td>
+                                        <td class="price-cell">200,000원</td>
+                                   </tr>
+                                   <tr>
+                                        <td class="item-cell" rowspan="1">이갈이장치</td>
+                                        <td class="type-cell">Hard Type</td>
+                                        <td class="price-cell">600,000원</td>
+                                   </tr>
+                              </tbody>
+                         </table>
+                    </div>
+
+                    <div class="clinic-info-box">
+                         <p><strong>의료기관 명칭</strong> 연세레이크치과의원</p>
+                         <p><strong>대표자 성명</strong> 김태원</p>
+                         <p><strong>주소</strong> 경기 화성시 동탄대로 181 레이크꼬모 310호</p>
+                         <p><strong>사업자등록번호</strong> 578-07-03168</p>
+                    </div>
+
+                    <div class="back-buttons">
+                         <a href="index.html" class="btn-main"><i class="fa fa-home"></i> 메인으로 돌아가기</a>
+                         <a href="tel:0313787522" class="btn-call"><i class="fa fa-phone"></i> 전화 문의하기</a>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

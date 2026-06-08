@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <title>연세레이크치과 - 연세레이크 임플란트</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="연세레이크치과 임플란트 진료 안내. 정밀 진단, 맞춤 치료 계획, 보철 제작과 사후관리까지 환자 상태에 맞춰 안내합니다.">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+     <style>
+          :root {
+               --lake-blue: #1a5b82;
+               --lake-blue-dark: #123f5d;
+               --lake-blue-soft: #eef6fb;
+               --lake-green: #2fb878;
+               --text-main: #263746;
+               --text-sub: #5c6b76;
+               --line-soft: #dce8f0;
+               --bg-soft: #f7fbfe;
+          }
+
+          body {
+               word-break: keep-all;
+               overflow-wrap: break-word;
+               color: var(--text-main);
+          }
+
+          a,
+          button {
+               transition: all 0.2s ease;
+          }
+
+          header p {
+               font-weight: 700;
+               letter-spacing: 0.6px;
+               margin-bottom: 0;
+          }
+
+          header .phone-icon,
+          header .date-icon {
+               margin-right: 16px;
+          }
+
+          .dropdown-menu {
+               border-top: 3px solid var(--lake-blue);
+               border-radius: 0 0 8px 8px;
+               box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+               margin-top: 0;
+               padding: 10px 0;
+          }
+
+          .dropdown-menu>li>a {
+               padding: 11px 20px;
+               font-weight: 500;
+               color: #333;
+               font-size: 14px;
+          }
+
+          .dropdown-menu>li>a:hover,
+          .dropdown-menu>li>a:focus {
+               background-color: #f4f8fb;
+               color: var(--lake-blue);
+               font-weight: 700;
+               padding-left: 25px;
+          }
+
+          @media (min-width: 768px) {
+               .navbar-nav>li.dropdown:hover>.dropdown-menu {
+                    display: block;
+                    animation: fadeInDown 0.25s ease forwards;
+               }
+          }
+
+          @keyframes fadeInDown {
+               from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+               }
+
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+
+          #implant-detail {
+               padding: 64px 0;
+               background: linear-gradient(180deg, #ffffff 0%, var(--bg-soft) 100%);
+          }
+
+          .content-row {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: flex-start;
+          }
+
+          .implant-hero {
+               overflow: hidden;
+               background: #ffffff;
+               border: 1px solid var(--line-soft);
+               border-radius: 20px;
+               box-shadow: 0 12px 35px rgba(26, 91, 130, 0.08);
+               margin-bottom: 48px;
+          }
+
+          .implant-hero .hero-image img {
+               width: 100%;
+               min-height: 320px;
+               object-fit: cover;
+               display: block;
+          }
+
+          .implant-hero .hero-copy {
+               padding: 42px 38px 44px;
+          }
+
+          .eyebrow {
+               display: inline-block;
+               margin-bottom: 14px;
+               padding: 7px 15px;
+               border-radius: 999px;
+               background: var(--lake-blue-soft);
+               color: var(--lake-blue);
+               font-size: 13px;
+               font-weight: 800;
+               letter-spacing: 0.04em;
+          }
+
+          .hero-title {
+               margin: 0 0 18px;
+               color: var(--lake-blue-dark);
+               font-size: 34px;
+               line-height: 1.35;
+               font-weight: 850;
+               letter-spacing: -0.04em;
+          }
+
+          .hero-desc {
+               margin: 0 0 24px;
+               color: var(--text-sub);
+               font-size: 17px;
+               line-height: 1.85;
+          }
+
+          .hero-point-list {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               gap: 10px;
+               margin: 24px 0 0;
+          }
+
+          .hero-point {
+               padding: 13px 12px;
+               border-radius: 12px;
+               background: #f5f9fc;
+               color: var(--lake-blue-dark);
+               font-size: 14px;
+               font-weight: 800;
+               text-align: center;
+          }
+
+          .implant-section {
+               margin-bottom: 48px;
+               padding: 38px 34px;
+               background: #ffffff;
+               border: 1px solid var(--line-soft);
+               border-radius: 18px;
+               box-shadow: 0 8px 28px rgba(26, 91, 130, 0.055);
+          }
+
+          .section-title {
+               margin: 0 0 20px;
+               color: var(--lake-blue-dark);
+               font-size: 27px;
+               line-height: 1.4;
+               font-weight: 850;
+               letter-spacing: -0.035em;
+          }
+
+          .section-title i {
+               margin-right: 9px;
+               color: var(--lake-blue);
+          }
+
+          .section-lead {
+               margin: 0 0 24px;
+               color: var(--text-sub);
+               font-size: 16.5px;
+               line-height: 1.85;
+          }
+
+          .section-image {
+               margin: 22px 0 26px;
+               overflow: hidden;
+               border-radius: 15px;
+               border: 1px solid #e5eef4;
+               background: #f4f8fb;
+          }
+
+          .section-image img {
+               width: 100%;
+               display: block;
+          }
+
+          .caption {
+               margin: 10px 0 0;
+               color: #7a8791;
+               font-size: 13px;
+               text-align: center;
+               line-height: 1.6;
+          }
+
+          .feature-grid {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               gap: 16px;
+               margin-top: 24px;
+          }
+
+          .feature-card {
+               min-height: 150px;
+               padding: 22px 20px;
+               border-radius: 16px;
+               background: #f7fbfe;
+               border: 1px solid #e2edf4;
+          }
+
+          .feature-icon {
+               width: 42px;
+               height: 42px;
+               margin-bottom: 15px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 50%;
+               background: var(--lake-blue);
+               color: #ffffff;
+               font-size: 17px;
+          }
+
+          .feature-card h4 {
+               margin: 0 0 10px;
+               color: var(--lake-blue-dark);
+               font-size: 18px;
+               font-weight: 850;
+               line-height: 1.4;
+          }
+
+          .feature-card p {
+               margin: 0;
+               color: var(--text-sub);
+               font-size: 14.5px;
+               line-height: 1.75;
+          }
+
+          .info-list {
+               margin: 20px 0 0;
+               padding: 0;
+               list-style: none;
+          }
+
+          .info-list li {
+               display: flex;
+               gap: 10px;
+               align-items: flex-start;
+               margin-bottom: 13px;
+               color: var(--text-main);
+               font-size: 15.5px;
+               line-height: 1.7;
+          }
+
+          .info-list li i {
+               margin-top: 5px;
+               color: var(--lake-blue);
+          }
+
+          .process-list {
+               position: relative;
+               margin-top: 28px;
+          }
+
+          .process-item {
+               display: flex;
+               gap: 17px;
+               margin-bottom: 22px;
+          }
+
+          .process-num {
+               flex: 0 0 46px;
+               width: 46px;
+               height: 46px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               border-radius: 50%;
+               background: var(--lake-blue);
+               color: #ffffff;
+               font-weight: 850;
+          }
+
+          .process-text h4 {
+               margin: 0 0 6px;
+               color: var(--lake-blue-dark);
+               font-size: 17px;
+               font-weight: 850;
+          }
+
+          .process-text p {
+               margin: 0;
+               color: var(--text-sub);
+               font-size: 14.8px;
+               line-height: 1.75;
+          }
+
+          .point-wrap {
+               margin-top: 22px;
+               padding: 18px 20px;
+               border-radius: 14px;
+               background: #f0f7fb;
+               border-left: 5px solid var(--lake-blue);
+          }
+
+          .point-wrap p {
+               margin: 0;
+               color: var(--lake-blue-dark);
+               font-size: 15px;
+               line-height: 1.7;
+               font-weight: 750;
+          }
+
+          .photo-grid {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               gap: 18px;
+               margin-top: 24px;
+          }
+
+          .photo-card {
+               overflow: hidden;
+               border-radius: 18px;
+               border: 1px solid #e0ebf2;
+               background: #ffffff;
+               box-shadow: 0 8px 24px rgba(26, 91, 130, 0.06);
+          }
+
+          .photo-card img {
+               width: 100%;
+               height: 230px;
+               object-fit: cover;
+               display: block;
+          }
+
+          .photo-card .photo-text {
+               padding: 24px 24px 26px;
+          }
+
+          .photo-card h4 {
+               margin: 0 0 10px;
+               color: var(--lake-blue-dark);
+               font-size: 20px;
+               font-weight: 850;
+          }
+
+          .photo-card p {
+               margin: 0;
+               color: var(--text-sub);
+               font-size: 15px;
+               line-height: 1.8;
+          }
+
+          .notice-box {
+               padding: 28px 28px;
+               border-radius: 18px;
+               background: linear-gradient(135deg, #1a5b82 0%, #123f5d 100%);
+               color: #ffffff;
+               text-align: center;
+               box-shadow: 0 12px 30px rgba(26, 91, 130, 0.16);
+          }
+
+          .notice-box h3 {
+               margin: 0 0 14px;
+               color: #ffffff;
+               font-size: 24px;
+               font-weight: 850;
+          }
+
+          .notice-box p {
+               margin: 0;
+               color: #e4eef5;
+               font-size: 16px;
+               line-height: 1.85;
+          }
+
+          .notice-box .btn {
+               margin-top: 24px;
+               padding: 13px 32px;
+               border-radius: 999px;
+               color: var(--lake-blue-dark);
+               font-weight: 850;
+               border: none;
+          }
+
+          /* 우측 사이드 카드: sticky는 내부 .side-wrap이 아니라 Bootstrap 컬럼(.side-col)에 직접 적용해야 정상 작동합니다. */
+          .side-col {
+               position: -webkit-sticky !important;
+               position: sticky !important;
+               top: 110px !important;
+               align-self: flex-start;
+               height: fit-content;
+               z-index: 20;
+               margin-bottom: 40px;
+          }
+
+          .side-wrap {
+               position: static !important;
+               top: auto !important;
+               margin-bottom: 0;
+          }
+
+          /* sticky가 부모 overflow 때문에 막히는 경우를 방지 */
+          #implant-detail,
+          #implant-detail .container,
+          #implant-detail .row,
+          #implant-detail .content-row {
+               overflow: visible !important;
+          }
+
+          .side-card {
+               padding: 30px 28px;
+               border-radius: 18px;
+               background: #ffffff;
+               border: 1px solid #e0ebf2;
+               box-shadow: 0 10px 30px rgba(26, 91, 130, 0.08);
+          }
+
+          .side-card h4 {
+               margin: 0 0 14px;
+               color: var(--lake-blue-dark);
+               font-size: 21px;
+               font-weight: 850;
+               line-height: 1.5;
+          }
+
+          .side-card>p {
+               margin: 0 0 22px;
+               color: var(--text-sub);
+               font-size: 14.5px;
+               line-height: 1.7;
+          }
+
+          .side-mini {
+               margin-bottom: 17px;
+          }
+
+          .side-mini strong {
+               display: block;
+               margin-bottom: 5px;
+               color: var(--text-main);
+               font-size: 14.5px;
+          }
+
+          .side-mini p {
+               margin: 0;
+               color: #697782;
+               font-size: 13.5px;
+               line-height: 1.65;
+          }
+
+          .side-banner {
+               overflow: hidden;
+               margin: 22px 0;
+               border-radius: 14px;
+               background: #f4f8fb;
+               border: 1px solid #e2edf4;
+          }
+
+          .side-banner img {
+               width: 100%;
+               display: block;
+          }
+
+          .side-card .btn {
+               display: block;
+               width: 100%;
+               padding: 13px 0;
+               border-radius: 8px;
+               font-size: 15px;
+               font-weight: 850;
+          }
+
+          .btn-call {
+               background: var(--lake-blue);
+               border-color: var(--lake-blue);
+               color: #ffffff !important;
+          }
+
+          .btn-call:hover,
+          .btn-call:focus {
+               background: var(--lake-blue-dark);
+               border-color: var(--lake-blue-dark);
+          }
+
+          .btn-kakao {
+               margin-top: 10px;
+               background: var(--lake-green);
+               border-color: var(--lake-green);
+               color: #ffffff !important;
+          }
+
+          @media (max-width: 991px) {
+
+               .hero-point-list,
+               .feature-grid {
+                    grid-template-columns: 1fr;
+               }
+
+               .photo-grid {
+                    grid-template-columns: 1fr;
+               }
+
+               .side-col {
+                    position: static !important;
+                    top: auto !important;
+                    height: auto;
+               }
+
+               .side-wrap {
+                    position: static !important;
+                    top: auto !important;
+               }
+          }
+
+          @media (max-width: 767px) {
+               #implant-detail {
+                    padding: 38px 0;
+               }
+
+               .implant-hero .hero-image img {
+                    min-height: 220px;
+               }
+
+               .implant-hero .hero-copy,
+               .implant-section {
+                    padding: 28px 22px;
+               }
+
+               .hero-title {
+                    font-size: 27px;
+               }
+
+               .section-title {
+                    font-size: 23px;
+               }
+
+               .section-lead,
+               .hero-desc {
+                    font-size: 15.5px;
+                    line-height: 1.8;
+               }
+
+               .photo-card img {
+                    height: 210px;
+               }
+          }
+     </style>
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+     <header>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-4 col-sm-5">
+                         <p>YONSEI LAKE DENTAL CLINIC</p>
+                    </div>
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 031-378-7522</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 평일 10:00 - 19:00</span>
+                         <i class="fa fa-map-marker"></i> <a href="index.html#google-map">레이크꼬모 310호</a>
+                    </div>
+               </div>
+          </div>
+     </header>
+
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand"
+                         style="display: inline-flex !important; align-items: center; height: 50px; padding-top: 12px !important; padding-bottom: 12px !important; margin-top: 3px !important; position: relative !important; z-index: 999 !important;">
+                         <img src="images/logo.png" alt="로고"
+                              style="width: 40px; height: auto; display: block; flex-shrink: 0; margin-right: 7px;">
+
+                         <div class="brand-text"
+                              style="display: inline-block; line-height: 1.2; vertical-align: middle;">
+                              연세레이크치과
+                              <span class="eng-logo" style="display: block;">YONSEI LAKE DENTAL CLINIC</span>
+                         </div>
+                    </a>
+               </div>
+
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="index.html">홈</a></li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">레이크소개 <i
+                                        class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="index.html#about">의료진 소개</a></li>
+                                   <li><a href="index.html#team">병원 소개</a></li>
+                              </ul>
+                         </li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">임플란트 <i
+                                        class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="clean01-01.html">연세레이크 임플란트</a></li>
+                                   <li><a href="clean01-02.html">임플란트 한눈에 보기</a></li>
+                                   <li><a href="clean01-03.html">상악동 거상술</a></li>
+                                   <li><a href="clean01-04.html">발치 즉시 임플란트</a></li>
+                              </ul>
+                         </li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">진료과목 <i
+                                        class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="clean02.html">일반 치료</a></li>
+                                   <li><a href="clean03.html">신경 치료</a></li>
+                                   <li><a href="clean04.html">사랑니 발치</a></li>
+                                   <li><a href="clean05.html">심미 보철 치료</a></li>
+                                   <li><a href="clean06.html">턱관절 치료</a></li>
+                              </ul>
+                         </li>
+
+                         <li><a href="index.html#google-map">오시는 길</a></li>
+
+                         <li class="appointment-btn">
+                              <a href="tel:0313787522">전화 예약하기</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </section>
+
+     <section id="implant-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row content-row">
+                    <div class="col-md-8 col-sm-7" style="margin-bottom: 42px;">
+
+                         <div class="implant-hero wow fadeInUp" data-wow-delay="0.1s">
+                              <div class="hero-image">
+                                   <!-- 대표 이미지 교체 위치: images/implant_main.jpg -->
+                                   <img src="images/implant_main.jpg" alt="연세레이크치과 임플란트 진료 안내 이미지">
+                              </div>
+                              <div class="hero-copy">
+                                   <span class="eyebrow">YONSEI LAKE IMPLANT</span>
+                                   <h1 class="hero-title">정확한 진단에서 시작하는<br>연세레이크 임플란트</h1>
+                                   <p class="hero-desc">
+                                        임플란트는 치아를 대신하는 보철 치료이지만, 단순히 인공치아를 심는 과정만으로 끝나지 않습니다.
+                                        잇몸뼈 상태, 주변 치아, 교합, 전신 건강 상태까지 함께 확인한 뒤 환자분에게 맞는 치료 계획을 세우는 것이 중요합니다.
+                                   </p>
+                                   <div class="hero-point-list">
+                                        <div class="hero-point">정밀 진단</div>
+                                        <div class="hero-point">맞춤 치료 계획</div>
+                                        <div class="hero-point">사후관리 안내</div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="implant-section wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-check-circle"></i>왜 연세레이크치과인가요?</h2>
+                              <p class="section-lead">
+                                   임플란트는 치료 전 계획과 치료 후 관리가 모두 중요합니다.
+                                   연세레이크치과는 환자분의 구강 상태를 꼼꼼히 확인하고, 필요한 치료 범위와 관리 방법을 이해하기 쉽게 안내합니다.
+                              </p>
+
+                              <div class="feature-grid">
+                                   <div class="feature-card">
+                                        <div class="feature-icon"><i class="fa fa-user-md"></i></div>
+                                        <h4>의료진 중심 진료</h4>
+                                        <p>상담과 진단 과정에서 환자분의 현재 상태와 치료 방향을 충분히 설명합니다.</p>
+                                   </div>
+                                   <div class="feature-card">
+                                        <div class="feature-icon"><i class="fa fa-cube"></i></div>
+                                        <h4>디지털 정밀 진단</h4>
+                                        <p>3D CT 등 진단 장비를 활용해 잇몸뼈와 주변 구조를 입체적으로 확인합니다.</p>
+                                   </div>
+                                   <div class="feature-card">
+                                        <div class="feature-icon"><i class="fa fa-heartbeat"></i></div>
+                                        <h4>개인별 관리 계획</h4>
+                                        <p>치료 후에도 정기 검진과 구강 관리 방법을 안내해 장기적인 사용을 돕습니다.</p>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="implant-section wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-cube"></i>정밀 진단 시스템</h2>
+                              <p class="section-lead">
+                                   성공적인 임플란트 치료 계획은 정확한 진단에서 시작됩니다.
+                                   뼈의 양과 폭, 신경 위치, 상악동과의 거리 등을 확인해 무리하지 않는 치료 계획을 세웁니다.
+                              </p>
+                              <div class="section-image">
+                                   <!-- 정밀 진단 이미지 교체 위치: images/implant_ct.jpg -->
+                                   <img src="images/implant_ct.jpg" alt="임플란트 정밀 진단을 위한 3D CT 장비" loading="lazy">
+                              </div>
+                              <p class="caption">3D CT 등 디지털 장비를 활용해 환자분의 구강 구조를 입체적으로 확인합니다.</p>
+
+                              <div class="point-wrap">
+                                   <p><i class="fa fa-check-circle"></i> POINT: 잇몸뼈 상태, 주변 치아, 신경 위치, 보철 계획까지 함께 고려합니다.
+                                   </p>
+                              </div>
+                         </div>
+
+                         <div class="implant-section wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-certificate"></i>정품 임플란트 재료 사용</h2>
+                              <p class="section-lead">
+                                   임플란트는 몸 안에 식립되는 재료이기 때문에 검증된 제품을 사용하는 것이 중요합니다.
+                                   연세레이크치과는 환자분의 상태와 치료 계획에 맞는 임플란트 재료를 안내하고, 필요한 경우 정품 확인 및 사후관리 정보를 함께 제공합니다.
+                              </p>
+                              <div class="section-image">
+                                   <!-- 임플란트 재료 이미지 교체 위치: images/implant_osstem.png -->
+                                   <img src="images/implant_osstem.png" alt="정품 임플란트 재료 안내 이미지" loading="lazy">
+                              </div>
+                              <ul class="info-list">
+                                   <li><i class="fa fa-angle-right"></i> 환자분의 잇몸뼈 상태와 치아 위치에 맞춘 재료 선택</li>
+                                   <li><i class="fa fa-angle-right"></i> 치료 전 사용 재료와 치료 계획에 대한 충분한 설명</li>
+                                   <li><i class="fa fa-angle-right"></i> 치료 후 정기 검진과 관리 방법 안내</li>
+                              </ul>
+                         </div>
+
+                         <div class="implant-section wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-cogs"></i>보철 제작과 교합까지 고려</h2>
+                              <p class="section-lead">
+                                   임플란트는 식립 위치만큼 보철물의 모양, 색상, 높이, 씹는 힘의 균형도 중요합니다.
+                                   의료진과 보철 제작 과정의 긴밀한 소통을 통해 자연스럽고 편안한 사용감을 목표로 합니다.
+                              </p>
+                              <div class="section-image">
+                                   <!-- 보철 제작 이미지 교체 위치: images/implant_lab.jpg -->
+                                   <img src="images/implant_lab.jpg" alt="임플란트 보철 제작 및 교합 확인 이미지" loading="lazy">
+                              </div>
+                              <div class="point-wrap">
+                                   <p><i class="fa fa-check-circle"></i> POINT: 단순히 심는 것에서 끝나지 않고, 씹는 힘과 보철의 편안함까지 함께
+                                        확인합니다.</p>
+                              </div>
+                         </div>
+
+                         <div class="implant-section wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-list-ol"></i>임플란트 진료 과정</h2>
+                              <p class="section-lead">
+                                   환자분마다 잇몸뼈 상태와 필요한 치료 범위가 다르기 때문에, 실제 치료 일정과 방법은 검사 후 달라질 수 있습니다.
+                              </p>
+
+                              <div class="process-list">
+                                   <div class="process-item">
+                                        <div class="process-num">01</div>
+                                        <div class="process-text">
+                                             <h4>상담 및 구강 상태 확인</h4>
+                                             <p>불편한 부위, 전신질환 여부, 복용 중인 약 등을 함께 확인합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="process-item">
+                                        <div class="process-num">02</div>
+                                        <div class="process-text">
+                                             <h4>3D CT 정밀 진단</h4>
+                                             <p>잇몸뼈의 양과 폭, 신경 위치, 주변 치아 상태를 입체적으로 분석합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="process-item">
+                                        <div class="process-num">03</div>
+                                        <div class="process-text">
+                                             <h4>개인별 치료 계획 수립</h4>
+                                             <p>필요한 경우 뼈이식, 상악동 거상술, 발치 즉시 식립 여부 등을 함께 검토합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="process-item">
+                                        <div class="process-num">04</div>
+                                        <div class="process-text">
+                                             <h4>임플란트 식립 및 보철</h4>
+                                             <p>치료 계획에 따라 식립 후 안정화 기간을 거쳐 보철물을 연결합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="process-item" style="margin-bottom:0;">
+                                        <div class="process-num">05</div>
+                                        <div class="process-text">
+                                             <h4>정기 검진과 사후관리</h4>
+                                             <p>임플란트를 오래 건강하게 사용할 수 있도록 관리 주기와 구강 관리법을 안내합니다.</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="implant-section wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-camera"></i>정밀 진단부터 사후관리까지</h2>
+                              <p class="section-lead">
+                                   저희 연세레이크치과는 <strong>'소통'</strong>과 <strong>'정직'</strong>을 최우선으로 생각합니다.
+                                   치료 전 과정에서 환자분의 상태와 치료 계획을 충분히 설명드리고, 치료 후에도 관리 방법과 검진 주기를 안내해 드립니다.
+                              </p>
+
+                              <div class="photo-grid">
+                                   <div class="photo-card">
+                                        <!-- 추천 이미지: 실제 병원 3D CT 장비 또는 촬영실 사진 -->
+                                        <img src="images/xray-02.jpg" alt="임플란트 정밀 진단 장비 이미지" loading="lazy">
+                                        <div class="photo-text">
+                                             <h4>정밀 진단</h4>
+                                             <p>3D CT 등 디지털 장비를 활용해 잇몸뼈와 주변 구조를 세밀하게 확인합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="photo-card">
+                                        <!-- 추천 이미지: 실제 상담실, 진료실, 원장 상담 장면 -->
+                                        <img src="images/dental-01.jpg" alt="임플란트 맞춤 상담 이미지" loading="lazy">
+                                        <div class="photo-text">
+                                             <h4>맞춤 상담</h4>
+                                             <p>구강 상태와 생활 습관, 치료 목표를 고려해 치료 방향을 차근차근 안내합니다.</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="notice-box wow fadeInUp" data-wow-delay="0.3s">
+                              <h3><i class="fa fa-shield" style="margin-right: 8px;"></i>임플란트는 사후관리가 중요합니다</h3>
+                              <p>
+                                   임플란트는 식립 후에도 정기 검진과 올바른 구강 관리가 필요합니다.<br>
+                                   연세레이크치과는 치료 후 관리 방법과 검진 주기를 안내해 환자분이 오래 편안하게 사용할 수 있도록 돕습니다.
+                              </p>
+                              <a href="tel:0313787522" class="btn btn-default"><i class="fa fa-phone"></i> 상담 예약하기</a>
+                         </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-5 side-col">
+                         <div class="side-wrap">
+                              <div class="side-card">
+                                   <h4>자연치아를 먼저 생각하는<br>임플란트 진료</h4>
+                                   <p>
+                                        무조건적인 발치나 수술을 권하기보다, 현재 치아를 살릴 수 있는지 먼저 확인하고 필요한 치료를 안내합니다.
+                                   </p>
+
+                                   <hr style="border-top: 1px dashed #cddce6; margin: 20px 0;">
+
+                                   <div class="side-mini">
+                                        <strong><i class="fa fa-user-md" style="color:#1a5b82;"></i> 의료진 책임 진료</strong>
+                                        <p>진단부터 치료 계획, 사후관리까지 환자분의 상태에 맞춰 설명합니다.</p>
+                                   </div>
+                                   <div class="side-mini">
+                                        <strong><i class="fa fa-cube" style="color:#1a5b82;"></i> 디지털 진단 장비 활용</strong>
+                                        <p>구강 구조를 입체적으로 확인해 보다 신중하게 치료 계획을 세웁니다.</p>
+                                   </div>
+                                   <div class="side-mini">
+                                        <strong><i class="fa fa-heart" style="color:#1a5b82;"></i> 정기 관리 안내</strong>
+                                        <p>임플란트 사용 기간을 높이기 위한 검진과 관리 방법을 안내합니다.</p>
+                                   </div>
+
+                                   <!--<div class="side-banner">
+                                        사이드 상담 이미지 교체 위치: images/implant_sidebar.jpg
+                                        <img src="images/implant_sidebar.jpg" alt="연세레이크치과 임플란트 상담 안내" loading="lazy">
+                                   </div>-->
+
+                                   <a href="tel:0313787522" class="btn btn-call"><i class="fa fa-phone"
+                                             style="margin-right:4px;"></i> 빠른 전화 상담</a>
+                                   <!--<a href="tel:0313787522" class="btn btn-kakao"><i class="fa fa-calendar-check-o" style="margin-right:4px;"></i> 상담 예약하기</a>-->
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">연세레이크치과</h4>
+                              <p>환자분의 자연치아를 소중히 여기며, 정직하고 바른 진료를 약속드립니다. 언제나 편안하게 방문할 수 있는 치과가 되겠습니다.</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 031-378-7522</p>
+                                   <p><i class="fa fa-map-marker"></i> 경기 화성시 동탄대로 181 레이크꼬모 310호</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">빠른 링크</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="index.html#about">
+                                             <h5>의료진 소개</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="index.html#news">
+                                             <h5>주요 진료 과목</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="tel:0313787522">
+                                             <h5>전화 예약하기</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">진료 시간</h4>
+                                   <p>평일 <span>10:00 AM - 07:00 PM</span></p>
+                                   <p>야간진료(목) <span>10:00 AM - 09:00 PM</span></p>
+                                   <p>토요일 <span>10:00 AM - 02:00 PM</span></p>
+                                   <p>점심시간 <span>01:00 PM - 02:00 PM</span></p>
+                                   <p>수요일/일요일 <span>휴진</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="#" class="fa fa-pencil-square"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-9 col-sm-9">
+                              <div class="clinic-legal-info" style="font-size: 13px; line-height: 1.9; color: #777;">
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">의료기관 명칭</strong> : 연세레이크치과의원
+                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
+                                        <strong style="color:#555;">대표자 성명</strong> : 김태원
+                                   </p>
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
+                                   </p>
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">사업자등록번호</strong> : 578-07-03168
+                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
+                                        <a href="nonpay.html"
+                                             style="color:#392679; font-weight:700; text-decoration: underline;">비급여 수가표
+                                             보기</a>
+                                   </p>
+                              </div>
+                         </div>
+                         <div class="col-md-3 col-sm-3 text-align-right" style="text-align: right;">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i> UP</a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+
+</html>

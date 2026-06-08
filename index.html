@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <title>연세레이크치과</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+
+     <style>
+          .doctor-profile {
+               text-align: center;
+          }
+
+          .doctor-name {
+               text-align: center !important;
+               margin: 0 0 8px !important;
+               color: #202124;
+               font-size: 27px;
+               line-height: 1.35;
+               font-weight: 800;
+               letter-spacing: -0.04em;
+          }
+
+          .doctor-position {
+               display: inline-block;
+               margin-left: 6px;
+               color: #333333;
+               font-size: 0.78em;
+               font-weight: 700;
+               letter-spacing: -0.05em;
+               vertical-align: baseline;
+          }
+
+          .doctor-cert {
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               gap: 8px;
+               max-width: 100%;
+               margin: 0 auto 8px;
+               color: #111111;
+               font-size: clamp(13px, 1.15vw, 17px);
+               line-height: 1.35;
+               font-weight: 800;
+               letter-spacing: -0.07em;
+               white-space: nowrap;
+          }
+
+          .doctor-cert-logo {
+               flex: 0 0 auto;
+               width: 26px;
+               height: 26px;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .doctor-cert-logo img {
+               width: 100%;
+               height: 100%;
+               display: block;
+               object-fit: contain;
+          }
+
+          .doctor-slogan {
+               text-align: center !important;
+               margin-top: 2px !important;
+               margin-bottom: 0 !important;
+               color: #666666;
+               font-size: 14.5px;
+               line-height: 1.55;
+               letter-spacing: -0.03em;
+          }
+
+          @media (max-width: 767px) {
+               .doctor-name {
+                    font-size: 25px;
+               }
+
+               .doctor-cert {
+                    white-space: normal;
+                    font-size: 15px;
+                    letter-spacing: -0.05em;
+               }
+          }
+     </style>
+
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- 이벤트 팝업 1 -->
+     <div class="modal fade" id="mainPopup" tabindex="-1" role="dialog" aria-labelledby="popupLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 450px;">
+               <div class="modal-content"
+                    style="border-radius: 15px; overflow: hidden; border: none; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
+
+                    <div class="modal-body" style="padding: 0; position: relative;">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                              style="position: absolute; top: 15px; right: 20px; z-index: 99; font-size: 30px; color: #fff; opacity: 0.8; text-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+
+                         <a href="#appointment" class="smoothScroll" onclick="$('#mainPopup').modal('hide');">
+                              <img src="images/popup_event.png" alt="이벤트 팝업" style="width: 100%; display: block;">
+                         </a>
+                    </div>
+
+                    <div class="modal-footer"
+                         style="background: #333; padding: 10px 20px; border: none; display: flex; justify-content: space-between; align-items: center;">
+                         <label
+                              style="color: #bbb; font-weight: 400; font-size: 13px; cursor: pointer; margin-bottom: 0;">
+                              <input type="checkbox" id="closeToday" style="margin-right: 5px;"> 오늘 하루 보지 않기
+                         </label>
+                         <button type="button" class="btn-close-text" data-dismiss="modal"
+                              style="background: none; border: none; color: #fff; font-size: 13px; font-weight: bold;">[닫기]</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <!-- 이벤트 팝업 2 -->
+     <div class="modal fade" id="mainPopup2" tabindex="-1" role="dialog" aria-labelledby="popupLabel2"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document"
+               style="width: 315px; max-width: 90%; margin: 30px auto;">
+               <div class="modal-content"
+                    style="border-radius: 15px; overflow: hidden; border: none; box-shadow: 0 20px 50px rgba(0,0,0,0.2);">
+
+                    <div class="modal-body" style="padding: 0; position: relative;">
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                              style="position: absolute; top: 15px; right: 20px; z-index: 99; font-size: 30px; color: #fff; opacity: 0.8; text-shadow: 0 2px 5px rgba(0,0,0,0.3);">
+                              <span aria-hidden="true">&times;</span>
+                         </button>
+
+                         <a href="#appointment" class="smoothScroll" onclick="$('#mainPopup2').modal('hide');">
+                              <img src="images/popup_event2.png" alt="두 번째 이벤트 팝업" style="width: 100%; display: block;">
+                         </a>
+                    </div>
+
+                    <div class="modal-footer"
+                         style="background: #333; padding: 10px 20px; border: none; display: flex; justify-content: space-between; align-items: center;">
+                         <label
+                              style="color: #bbb; font-weight: 400; font-size: 13px; cursor: pointer; margin-bottom: 0;">
+                              <input type="checkbox" id="closeToday2" style="margin-right: 5px;"> 오늘 하루 보지 않기
+                         </label>
+                         <button type="button" class="btn-close-text" data-dismiss="modal"
+                              style="background: none; border: none; color: #fff; font-size: 13px; font-weight: bold;">[닫기]</button>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-3 col-sm-4">
+                         <p>YONSEI LAKE DENTAL CLINIC</p>
+                    </div>
+
+                    <div class="col-md-9 col-sm-8 text-align-right">
+
+                         <span class="phone-icon"
+                              style="display: inline-block; border: none !important; margin-right: 0 !important; padding-right: 0 !important;">
+                              <i class="fa fa-phone" style="margin-right: 5px;"></i> 031-378-7522
+                         </span>
+
+                         <span class="date-icon"
+                              style="display: inline-block; margin-left: 10px !important; padding-left: 10px !important; margin-right: 0 !important; padding-right: 0 !important; border: none !important; border-left: 1px solid #dcdcdc !important;">
+                              <i class="fa fa-calendar-plus-o" style="margin-right: 5px;"></i> 10:00 - 19:00 (Mon-Fri)
+                         </span>
+
+                         <span class="location-icon"
+                              style="display: inline-block; margin-left: 10px !important; padding-left: 10px !important; margin-right: 0 !important; padding-right: 0 !important; border: none !important; border-left: 1px solid #dcdcdc !important;">
+                              <i class="fa fa-map-marker" style="margin-right: 5px;"></i> <a href="#google-map">레이크꼬모
+                                   310호</a>
+                         </span>
+
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+     <style>
+          /* PC 화면(768px 이상)에서 마우스 올렸을 때 드롭다운 보이기 */
+          @media (min-width: 768px) {
+               .navbar-nav>li.dropdown:hover>.dropdown-menu {
+                    display: block;
+                    animation: fadeInDown 0.3s ease forwards;
+               }
+          }
+
+          /* 드롭다운 메뉴 디자인 */
+          .dropdown-menu {
+               border-top: 3px solid #392679;
+               /* 치과 메인 컬러 포인트 */
+               border-radius: 0 0 5px 5px;
+               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+               margin-top: 0;
+               padding: 10px 0;
+          }
+
+          .dropdown-menu>li>a {
+               padding: 10px 20px;
+               font-weight: 500;
+               color: #333;
+          }
+
+          .dropdown-menu>li>a:hover {
+               background-color: #f4f4f8;
+               color: #392679;
+               font-weight: bold;
+          }
+
+          /* 부드럽게 나타나는 효과 */
+          @keyframes fadeInDown {
+               from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+               }
+
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+     </style>
+
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand"
+                         style="display: inline-flex !important; align-items: center; height: 50px; padding-top: 12px !important; padding-bottom: 12px !important; margin-top: 3px !important; position: relative !important; z-index: 999 !important;">
+                         <img src="images/logo.png" alt="로고"
+                              style="width: 40px; height: auto; display: block; flex-shrink: 0; margin-right: 7px;">
+
+                         <div class="brand-text"
+                              style="display: inline-block; line-height: 1.2; vertical-align: middle;">
+                              연세레이크치과
+                              <span class="eng-logo" style="display: block;">YONSEI LAKE DENTAL CLINIC</span>
+                         </div>
+                    </a>
+               </div>
+
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+
+                         <li><a href="#top" class="smoothScroll">홈</a></li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle">
+                                   레이크소개 <i class="fa fa-angle-down"></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="#about" class="smoothScroll">의료진 소개</a></li>
+                                   <li><a href="#team" class="smoothScroll">병원 소개</a></li>
+                              </ul>
+                         </li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle">
+                                   임플란트 <i class="fa fa-angle-down"></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="clean01-01.html">연세레이크 임플란트</a></li>
+                                   <li><a href="clean01-02.html">임플란트 한눈에 보기</a></li>
+                                   <li><a href="clean01-03.html">상악동 거상술</a></li>
+                                   <li><a href="clean01-04.html">발치 즉시 임플란트</a></li>
+                              </ul>
+                         </li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle">
+                                   진료과목 <i class="fa fa-angle-down"></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="clean02.html">일반치료</a></li>
+                                   <li><a href="clean03.html">신경치료</a></li>
+                                   <li><a href="clean04.html">사랑니발치</a></li>
+                                   <li><a href="clean05.html">심미보철치료</a></li>
+                                   <li><a href="clean06.html">턱관절치료</a></li>
+                              </ul>
+                         </li>
+
+                         <li><a href="#google-map" class="smoothScroll">오시는 길</a></li>
+
+                         <li class="appointment-btn">
+                              <a href="tel:031-378-7522">전화 예약하기</a>
+                         </li>
+
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="owl-carousel owl-theme">
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>오스템(OSSTEM) 최고급 라인</h3>
+                                        <h1>최고 등급 제품 | 치료 기간 단축</h1>
+                                        <a href="#team" class="section-btn btn btn-default btn-gray smoothScroll">오스템
+                                             임플란트(SOI 등급)란?</a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>환자의 미소에서 가치를 찾습니다</h3>
+                                        <h1>안전한 사랑니 발치</h1>
+                                        <a href="#news" class="section-btn btn btn-default smoothScroll">진료 과목 보기</a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>풍부한 임상 경험의 전문의</h3>
+                                        <h1>프리미엄 치과 진료</h1>
+                                        <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">진료 과목
+                                             보기</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <img src="images/main-01.jpg" class="img-responsive" alt="원장 이미지">
+                              <div class="team-info doctor-profile" style="padding-bottom: 20px !important;">
+                                   <h3 class="doctor-name">김태원 <span class="doctor-position">대표원장</span></h3>
+
+                                   <div class="doctor-cert" aria-label="보건복지부 인증 통합치의학과 전문의">
+                                        <span class="doctor-cert-logo" aria-hidden="true">
+                                             <img src="images/mohw-symbol.png" alt="">
+                                        </span>
+                                        <span>보건복지부 인증 통합치의학과 전문의</span>
+                                   </div>
+
+                                   <p class="doctor-slogan">정직한 진료, 편안한 공간</p>
+
+                                   <div class="team-contact-info"
+                                        style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 0px !important; flex-wrap: wrap;">
+                                        <p
+                                             style="margin: 0px !important; padding: 0px !important; font-size: 15px; font-weight: bold; color: #333;">
+                                             <i class="fa fa-phone"></i> 031-378-7522
+                                        </p>
+                                        <a href="tel:031-378-7522" class="section-btn btn btn-default btn-gray"
+                                             style="margin: 0px !important; padding: 6px 12px !important; color: #333 !important; background-color: #e2e2e2 !important; border: 1px solid #ccc !important; font-weight: bold; font-size: 14px;">전화
+                                             예약하기</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-8 col-sm-6">
+
+                         <div class="about-info wow fadeInUp" data-wow-delay="0.4s" style="padding-top: 50px;">
+                              <h2 style="font-size: 35px; margin-bottom: 20px;">안녕하세요, 연세레이크치과 대표원장 김태원입니다.</h2>
+                              <p style="font-size: 20px; line-height: 1.8; word-break: keep-all;">
+                                   치과 방문이 두렵고 부담스러운 일이 되지 않도록,<br>
+                                   저희 연세레이크치과는 <strong>'소통'과 '정직'</strong>을 최우선으로 생각합니다.<br>
+
+                                   환자 한 분 한 분의 편안한 미소에서 최고의 가치를 찾는 연세레이크치과는
+                                   풍부한 임상 경험을 바탕으로 <strong>대표원장인 제가 직접</strong> 책임지고 진료합니다.<br>
+
+                                   첨단 장비를 통해 정확하게 진단하고,<br>
+                                   과잉 진료 없이 꼭 필요한 치료만을 정직하게 제안해 드리겠습니다.<br>
+                                   무엇보다 환자분의 소중한 자연 치아를 살리기 위해 끝까지 노력하겠습니다.<br>
+
+                                   아프기 전에 미리 챙겨주는 든든한 평생 주치의로서<br>
+                                   동탄 주민 여러분의 구강 건강을 지켜드리겠습니다.<br>
+                                   언제나 편안한 공간에서 따뜻한 진료로 보답하겠습니다. 감사합니다.
+                              </p>
+                         </div>
+
+                         <h4 class="wow fadeInUp" data-wow-delay="0.5s"
+                              style="color: #392679; margin-top: 30px; margin-bottom: 20px;">
+                              <i class="fa fa-clock-o"></i> 진료 시간 안내
+                         </h4>
+
+                         <div class="time-grid-container" style="gap: 15px; margin-bottom: 30px;">
+
+                              <div class="wow fadeInUp" data-wow-delay="0.6s"
+                                   style="border: 1px solid #ddd; display: flex; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+
+                                   <div
+                                        style="width: 80px; flex-shrink: 0; border-right: 1px solid #ddd; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 2px; background-color: #fdfdfd;">
+                                        <div
+                                             style="width: 46px; height: 46px; background-color: #392679; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 8px;">
+                                             <i class="fa fa-calendar-check-o"></i>
+                                        </div>
+                                        <strong
+                                             style="font-size: 14px; color: #333; letter-spacing: -0.5px;">평일</strong>
+                                        <span style="font-size: 11px; color: #777;">Weekday</span>
+                                   </div>
+
+                                   <div style="flex: 1; display: flex; min-width: 0;">
+                                        <div
+                                             style="flex: 1; min-width: 0; border-right: 1px solid #eee; padding: 20px 6px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                                             <strong
+                                                  style="color: #392679; font-size: 15px; margin-bottom: 12px; letter-spacing: -0.5px;">월
+                                                  / 화 / 금</strong>
+                                             <p
+                                                  style="margin: 0 0 8px 0; font-size: 13px; color: #333; white-space: nowrap; letter-spacing: -0.5px;">
+                                                  오전 10:00 ~ 오후 7:00</p>
+                                             <p
+                                                  style="margin: 0; font-size: 12px; color: #3b71ca; white-space: nowrap; letter-spacing: -0.5px;">
+                                                  점심시간 1:00 ~ 2:00</p>
+                                        </div>
+                                        <div
+                                             style="flex: 1; min-width: 0; padding: 20px 6px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                                             <strong
+                                                  style="color: #392679; font-size: 15px; margin-bottom: 12px; letter-spacing: -0.5px;">
+                                                  목요일 <span
+                                                       style="background-color: #eef2ff; color: #5a75d7; padding: 2px 5px; border-radius: 10px; font-size: 11px; vertical-align: middle; margin-left: 2px; font-weight: normal; letter-spacing: -0.5px;">야간진료</span>
+                                             </strong>
+                                             <p
+                                                  style="margin: 0 0 8px 0; font-size: 13px; color: #333; white-space: nowrap; letter-spacing: -0.5px;">
+                                                  오전 10:00 ~ 오후 9:00</p>
+                                             <p
+                                                  style="margin: 0; font-size: 12px; color: #3b71ca; white-space: nowrap; letter-spacing: -0.5px;">
+                                                  점심시간 1:00 ~ 2:00</p>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.6s"
+                                   style="border: 1px solid #ddd; display: flex; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
+
+                                   <div
+                                        style="width: 80px; flex-shrink: 0; border-right: 1px solid #ddd; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px 2px; background-color: #fdfdfd;">
+                                        <div
+                                             style="width: 46px; height: 46px; background-color: #392679; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 8px;">
+                                             <span style="font-weight: bold; font-family: sans-serif;">SAT</span>
+                                        </div>
+                                        <strong
+                                             style="font-size: 14px; color: #333; letter-spacing: -0.5px;">토요일</strong>
+                                        <span style="font-size: 11px; color: #777;">Saturday</span>
+                                   </div>
+
+                                   <div style="flex: 1; display: flex; min-width: 0;">
+                                        <div
+                                             style="flex: 1; min-width: 0; border-right: 1px solid #eee; padding: 20px 6px; text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                                             <strong
+                                                  style="color: #392679; font-size: 15px; margin-bottom: 12px; letter-spacing: -0.5px;">토요일</strong>
+                                             <p
+                                                  style="margin: 0 0 8px 0; font-size: 13px; color: #333; white-space: nowrap; letter-spacing: -0.5px;">
+                                                  오전 10:00 ~ 오후 2:00</p>
+                                             <p
+                                                  style="margin: 0; font-size: 12px; color: #3b71ca; white-space: nowrap; letter-spacing: -0.5px;">
+                                                  점심시간 없이 진료</p>
+                                        </div>
+                                        <div
+                                             style="flex: 1; min-width: 0; padding: 20px 6px; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                             <p
+                                                  style="margin: 0; font-size: 13.5px; color: #d9534f; line-height: 1.6; word-break: keep-all; letter-spacing: -0.5px;">
+                                                  ※ 수요일, 일요일 및<br>공휴일은 진료가 없습니다.
+                                             </p>
+                                        </div>
+                                   </div>
+                              </div>
+
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">병원 소개</h2>
+                         </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="room-detail.html">
+                                   <img src="images/room3.jpg" class="img-responsive" alt="연세레이크치과 프리미엄 1인 시술실">
+                              </a>
+                              <div class="news-info">
+                                   <span>치과 소개</span>
+                                   <h3><a href="room-detail.html">내부 시설</a></h3>
+
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">
+                                        다른 환자분들과 마주칠 걱정 없이,
+                                        완전히 독립된<br>1인 진료실에서 오직 환자분 한 분에게만 집중합니다.<br>
+                                        철저한 감염 관리와 함께 안심하고 진료받을 수 있는<br> 환경을 약속드립니다.
+                                   </p>
+
+                                   <div class="author">
+                                        <div class="author-info">
+                                             <h5>#프라이빗진료 &nbsp; #1인시술실 &nbsp; #VIP케어</h5>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="soi.html">
+                                   <img src="images/SOI.jpg" class="img-responsive" alt="SOI 설명">
+                              </a>
+                              <div class="news-info">
+                                   <span>임플란트 소개</span>
+                                   <h3><a href="soi.html">검증된 프리미엄, 오스템 임플란트 최고급 라인(SOI/BA)</a></h3>
+                                   <p>연세레이크치과는 타협하지 않는 품질을 위해 오스템(OSSTEM) 임플란트 중에서도 가장 상위 등급인 최고급 라인만을 엄선하여 사용합니다.<br>
+                                   </p>
+                                   <div class="author">
+                                        <div class="author-info">
+                                             <h5>#프리미엄 임플란트 #최고의 선택</h5>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <style>
+          #news .news-thumb {
+               margin-bottom: 40px;
+          }
+     </style>
+
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>진료 과목</h2>
+                              <p>클릭하시면 더 자세한 설명을 보실 수 있습니다.</p>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+
+                              <a href="clean01-01.html" style="position: relative; display: block;">
+                                   <img src="images/produce-01.png" class="img-responsive" alt="임플란트">
+
+                                   <!--<div
+                                        style="position: absolute; top: 15px; left: 15px; background-color: rgba(26, 91, 130, 0.85); color: #ffffff; padding: 10px 15px; border-radius: 5px; z-index: 10;">
+                                        <span
+                                             style="display: block; font-size: 20px; font-weight: bold; letter-spacing: 1px;">임플란트</span>
+                                        <span
+                                             style="display: block; font-size: 13px; font-weight: normal; margin-bottom: 3px; letter-spacing: 1px;">자연치아회복</span>
+                                   </div>-->
+                              </a>
+
+                              <div class="news-info">
+                                   <h3><a href="clean01-01.html">임플란트 센터</a></h3>
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">자연치아를 최대한 살리고,<br>꼭 필요한 경우에만 정밀하게
+                                        식립합니다.</p>
+                              </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="clean02.html" style="position: relative; display: block;">
+                                   <img src="images/produce-02.png" class="img-responsive" alt="충치치료 스케일링">
+
+                                   <!--<div
+                                        style="position: absolute; top: 15px; left: 15px; background-color: rgba(102, 191, 28, 0.85); color: #ffffff; padding: 10px 15px; border-radius: 5px; z-index: 10;">
+                                        <span
+                                             style="display: block; font-size: 20px; font-weight: bold; letter-spacing: 1px;">일반진료</span>
+                                        <span
+                                             style="display: block; font-size: 13px; font-weight: normal; margin-bottom: 3px; letter-spacing: 1px;">건강치아관리</span>
+                                   </div>-->
+                              </a>
+
+                              <div class="news-info">
+                                   <h3><a href="clean02.html">일반 · 예방 진료</a></h3>
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">충치 치료부터 스케일링까지,<br>아프기 전에 관리하는 꼼꼼한
+                                        예방 관리.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="1.0s">
+                              <a href="clean03.html" style="position: relative; display: block;">
+                                   <img src="images/produce-03.png" class="img-responsive" alt="신경치료">
+
+                                   <!--<div
+                                        style="position: absolute; top: 15px; left: 15px; background-color: rgba(175, 118, 20, 0.85); color: #ffffff; padding: 10px 15px; border-radius: 5px; z-index: 10;">
+                                        <span
+                                             style="display: block; font-size: 20px; font-weight: bold; letter-spacing: 1px;">신경치료</span>
+                                        <span
+                                             style="display: block; font-size: 13px; font-weight: normal; margin-bottom: 3px; letter-spacing: 1px;">편한일상회복</span>
+                                   </div>-->
+                              </a>
+
+                              <div class="news-info">
+                                   <h3><a href="clean03.html">신경치료</a></h3>
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">극심한 치통으로 고통받고 계시나요? 손상된 신경을<br>깨끗하게
+                                        제거해 편안한 일상을 되찾아 드립니다.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+
+                              <a href="clean04.html" style="position: relative; display: block;">
+                                   <img src="images/produce-04.png" class="img-responsive" alt="사랑니발치">
+
+                                   <!--<div
+                                        style="position: absolute; top: 15px; left: 15px; background-color: rgba(195, 28, 28, 0.85); color: #ffffff; padding: 10px 15px; border-radius: 5px; z-index: 10;">
+                                        <span
+                                             style="display: block; font-size: 20px; font-weight: bold; letter-spacing: 1px;">사랑니발치</span>
+                                        <span
+                                             style="display: block; font-size: 13px; font-weight: normal; margin-bottom: 3px; letter-spacing: 1px;">안전한발치</span>
+                                   </div>-->
+                              </a>
+
+                              <div class="news-info">
+                                   <h3><a href="clean04.html">사랑니 발치</a></h3>
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">고난도 케이스도 안전하게,<br>통증을 최소화하는 숙련된 발치
+                                        시스템</p>
+                              </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="clean05.html" style="position: relative; display: block;">
+                                   <img src="images/produce-05.png" class="img-responsive" alt="심미, 보철치료">
+
+                                   <!--<div
+                                        style="position: absolute; top: 15px; left: 15px; background-color: rgba(250, 65, 225, 0.85); color: #ffffff; padding: 10px 15px; border-radius: 5px; z-index: 10;">
+                                        <span
+                                             style="display: block; font-size: 20px; font-weight: bold; letter-spacing: 1px;">심미·보철치료</span>
+                                        <span
+                                             style="display: block; font-size: 13px; font-weight: normal; margin-bottom: 3px; letter-spacing: 1px;">아름다운미소</span>
+                                   </div>-->
+                              </a>
+
+                              <div class="news-info">
+                                   <h3><a href="clean05.html">심미 · 보철치료</a></h3>
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">자연스러운 아름다움과 기능성을<br>동시에 회복하는 맞춤형 보철
+                                        솔루션.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="1.0s">
+                              <a href="clean06.html" style="position: relative; display: block;">
+                                   <img src="images/produce-06.jpg" class="img-responsive" alt="턱관절 치료">
+
+                                   <!--<div
+                                        style="position: absolute; top: 15px; left: 15px; background-color: rgb(255, 153, 0); color: #ffffff; padding: 10px 15px; border-radius: 5px; z-index: 10;">
+                                        <span
+                                             style="display: block; font-size: 20px; font-weight: bold; letter-spacing: 1px;">턱관절치료</span>
+                                        <span
+                                             style="display: block; font-size: 13px; font-weight: normal; margin-bottom: 3px; letter-spacing: 1px;">통증및기능개선</span>
+                                   </div>-->
+                              </a>
+
+                              <div class="news-info">
+                                   <h3><a href="clean06.html">턱관절 클리닉</a></h3>
+                                   <p style="margin-bottom: 20px; line-height: 1.7;">불편한 턱관절, 정밀 진단을 통해<br>물리치료와 맞춤 장치로
+                                        편안함을 되찾아 드립니다.</p>
+                              </div>
+                         </div>
+                    </div>
+
+
+                    <!--<div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="clean04.html">
+                                   <img src="images/produce-04.png" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="clean04.html">사랑니 발치</a></h3>
+                                   <p>고난도 케이스도 안전하게, 통증을 최소화하는 숙련된 발치 시스템</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="clean05.html">
+                                   <img src="images/produce-05.png" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="clean05.html">심미 · 보철치료</a></h3>
+                                   <p>자연스러운 아름다움과 기능성을 동시에 회복하는 맞춤형 보철 솔루션.</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="1.0s">
+                              <a href="clean06.html">
+                                   <img src="images/produce-06.png" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <h3><a href="clean06.html">턱관절 클리닉</a></h3>
+                                   <p>불편한 턱관절, 정밀 진단을 통해 물리치료와 맞춤 장치로 편안함을 되찾아 드립니다.</p>
+                              </div>
+                         </div>
+                    </div>-->
+
+               </div>
+          </div>
+     </section>
+
+     <div style="text-align: center; padding: 50px 0 30px 0;">
+          <span style="color: #2ecc71; font-weight: bold; font-size: 14px; letter-spacing: 1px;">LOCATION</span>
+          <h2 style="font-size: 40px; font-weight: bold; color: #333; margin-top: 10px; margin-bottom: 10px;">오시는 길</h2>
+     </div>
+
+     <section id="google-map">
+          <iframe
+               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3179.2078877527224!2d127.10344377552288!3d37.17153024668051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b443b88715e41%3A0x392cfffb97b92a3c!2z7Jew7IS466CI7J207YGs7LmY6rO87J2Y7JuQ!5e0!3m2!1sko!2skr!4v1773995886100!5m2!1sko!2skr"
+               width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>
+
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">연세레이크치과</h4>
+                              <p>환자분의 자연치아를 소중히 여기며, 정직하고 바른 진료를 약속드립니다. 언제나 편안하게 방문할 수 있는 치과가 되겠습니다.</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 031-378-7522</p>
+                                   <p><i class="fa fa-map-marker"></i> 경기 화성시 동탄대로 181 레이크꼬모 310호</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">빠른 링크</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="#about" class="smoothScroll">
+                                             <h5>원장님 소개</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="#news" class="smoothScroll">
+                                             <h5>주요 진료 과목</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="tel:031-378-7522">
+                                             <h5>전화 예약하기</h5>
+                                        </a>
+                                        <!--추후 네이버 예약<a href="https://booking.naver.com/원장님예약링크" target="_blank"><h5>온라인 예약하기</h5></a>-->
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">진료 시간</h4>
+                                   <p>평일 <span>10:00 AM - 07:00 PM</span></p>
+                                   <p>야간진료(목) <span>10:00 AM - 09:00 PM</span></p>
+                                   <p>토요일 <span>10:00 AM - 02:00 PM</span></p>
+                                   <p>점심시간 <span>01:00 PM - 02:00 PM</span></p>
+                                   <p>수요일/일요일 <span>휴진</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="#" class="fa fa-pencil-square"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-9 col-sm-9">
+                              <div class="clinic-legal-info" style="font-size: 13px; line-height: 1.9; color: #777;">
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">의료기관 명칭</strong> : 연세레이크치과의원
+                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
+                                        <strong style="color:#555;">대표자 성명</strong> : 김태원
+                                   </p>
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
+                                   </p>
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">사업자등록번호</strong> : 578-07-03168
+                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
+                                        <a href="nonpay.html"
+                                             style="color:#392679; font-weight:700; text-decoration: underline;">비급여 수가표
+                                             보기</a>
+                                   </p>
+                              </div>
+                         </div>
+                         <div class="col-md-3 col-sm-3 text-align-right" style="text-align: right;">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i> UP</a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+     <script>
+          $(document).ready(function () {
+               if (localStorage.getItem('closeToday') !== 'Y') {
+                    $('#mainPopup').modal('show');
+               }
+
+               $('#mainPopup').on('hidden.bs.modal', function () {
+                    if ($('#closeToday').is(':checked')) {
+                         localStorage.setItem('closeToday', 'Y');
+                    }
+               });
+
+               if (localStorage.getItem('closeToday2') !== 'Y') {
+                    setTimeout(function () {
+                         $('#mainPopup2').modal('show');
+                    }, 700);
+               }
+
+               $('#mainPopup2').on('hidden.bs.modal', function () {
+                    if ($('#closeToday2').is(':checked')) {
+                         localStorage.setItem('closeToday2', 'Y');
+                    }
+               });
+          });
+     </script>
+
+</body>
+
+</html>

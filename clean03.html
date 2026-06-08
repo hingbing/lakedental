@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+     <title>연세레이크치과 - 신경치료</title>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="연세레이크치과 신경치료 및 자연치아 보존 진료 안내">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/magnific-popup.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="css/tooplate-style.css">
+
+     <style>
+          :root {
+               --lake-primary: #1a5b82;
+               --lake-primary-dark: #123f5b;
+               --lake-accent: #e67e22;
+               --lake-bg: #f7fbfd;
+               --lake-soft: #eef6fa;
+               --lake-border: #dfeaf1;
+               --lake-text: #333333;
+               --lake-muted: #666666;
+          }
+
+          body {
+               color: var(--lake-text);
+               word-break: keep-all;
+               overflow-wrap: break-word;
+          }
+
+          header p {
+               font-weight: 600;
+               letter-spacing: 0.5px;
+          }
+
+          header a,
+          header a:hover,
+          header a:focus {
+               color: inherit;
+          }
+
+          @media (min-width: 768px) {
+               .navbar-nav>li.dropdown:hover>.dropdown-menu {
+                    display: block;
+                    animation: fadeInDown 0.3s ease forwards;
+               }
+          }
+
+          .dropdown-menu {
+               border-top: 3px solid var(--lake-primary);
+               border-radius: 0 0 8px 8px;
+               box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+               margin-top: 0;
+               padding: 10px 0;
+          }
+
+          .dropdown-menu>li>a {
+               padding: 11px 20px;
+               font-weight: 500;
+               color: #333333;
+               font-size: 14px;
+               transition: all 0.2s ease;
+          }
+
+          .dropdown-menu>li>a:hover {
+               background-color: #f4f8fa;
+               color: var(--lake-primary);
+               font-weight: 700;
+               padding-left: 25px;
+          }
+
+          @keyframes fadeInDown {
+               from {
+                    opacity: 0;
+                    transform: translateY(-10px);
+               }
+
+               to {
+                    opacity: 1;
+                    transform: translateY(0);
+               }
+          }
+
+          #root-canal-detail {
+               padding: 60px 0;
+               background: var(--lake-bg);
+          }
+
+          .detail-row {
+               display: flex;
+               flex-wrap: wrap;
+               align-items: flex-start;
+          }
+
+          .page-hero {
+               position: relative;
+               overflow: hidden;
+               background: linear-gradient(135deg, #f0f8fc 0%, #ffffff 58%, #fff8f1 100%);
+               border: 1px solid var(--lake-border);
+               border-radius: 24px;
+               padding: 44px 42px;
+               margin-bottom: 42px;
+               box-shadow: 0 14px 35px rgba(26, 91, 130, 0.06);
+          }
+
+          .page-hero::after {
+               content: "";
+               position: absolute;
+               right: -80px;
+               top: -80px;
+               width: 220px;
+               height: 220px;
+               background: rgba(26, 91, 130, 0.06);
+               border-radius: 50%;
+          }
+
+          .eyebrow {
+               display: inline-block;
+               padding: 7px 14px;
+               background: #ffffff;
+               border: 1px solid var(--lake-border);
+               border-radius: 30px;
+               color: var(--lake-primary);
+               font-size: 13px;
+               font-weight: 800;
+               letter-spacing: 0.03em;
+               margin-bottom: 16px;
+          }
+
+          .page-hero h1 {
+               color: var(--lake-primary-dark);
+               font-size: 36px;
+               font-weight: 800;
+               line-height: 1.35;
+               margin: 0 0 18px;
+          }
+
+          .page-hero p {
+               max-width: 680px;
+               color: #4f5f6b;
+               font-size: 17px;
+               line-height: 1.8;
+               margin-bottom: 24px;
+          }
+
+          .hero-points {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 10px;
+          }
+
+          .hero-points span {
+               display: inline-flex;
+               align-items: center;
+               gap: 6px;
+               background: #ffffff;
+               border: 1px solid var(--lake-border);
+               border-radius: 30px;
+               padding: 9px 14px;
+               color: var(--lake-primary);
+               font-size: 14px;
+               font-weight: 700;
+          }
+
+          .implant-box {
+               background: #ffffff;
+               border: 1px solid var(--lake-border);
+               border-radius: 20px;
+               padding: 36px 34px;
+               margin-bottom: 34px;
+               box-shadow: 0 10px 28px rgba(26, 91, 130, 0.045);
+          }
+
+          .implant-box.no-card {
+               background: transparent;
+               border: 0;
+               border-radius: 0;
+               padding: 0;
+               box-shadow: none;
+          }
+
+          .section-title {
+               color: var(--lake-primary-dark);
+               font-size: 26px;
+               font-weight: 800;
+               line-height: 1.38;
+               margin: 0 0 18px;
+          }
+
+          .section-title i {
+               color: var(--lake-primary);
+               margin-right: 8px;
+          }
+
+          .section-desc {
+               color: var(--lake-muted);
+               font-size: 16px;
+               line-height: 1.85;
+               margin-bottom: 22px;
+          }
+
+          .lead-copy {
+               color: var(--lake-primary);
+               font-size: 20px;
+               line-height: 1.55;
+               font-weight: 800;
+               margin-bottom: 16px;
+          }
+
+          .news-image {
+               margin: 24px 0;
+          }
+
+          .news-image img {
+               width: 100%;
+               border-radius: 16px;
+               box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+          }
+
+          .image-caption {
+               text-align: center;
+               color: #7b8790;
+               font-size: 13px;
+               line-height: 1.6;
+               margin-top: 10px;
+          }
+
+          .notice-box {
+               background: #fff8f1;
+               border-left: 5px solid var(--lake-accent);
+               border-radius: 14px;
+               padding: 24px 26px;
+               color: #555555;
+               line-height: 1.8;
+               margin-top: 24px;
+          }
+
+          .symptom-grid,
+          .process-grid,
+          .photo-grid {
+               display: flex;
+               flex-wrap: wrap;
+               margin-left: -10px;
+               margin-right: -10px;
+          }
+
+          .symptom-item,
+          .process-item,
+          .photo-item {
+               padding-left: 10px;
+               padding-right: 10px;
+               margin-bottom: 20px;
+               display: flex;
+          }
+
+          .symptom-card,
+          .process-card,
+          .photo-card {
+               width: 100%;
+               background: #ffffff;
+               border: 1px solid var(--lake-border);
+               border-radius: 16px;
+               padding: 24px 22px;
+               box-shadow: 0 8px 22px rgba(26, 91, 130, 0.04);
+          }
+
+          .symptom-card {
+               display: flex;
+               gap: 14px;
+               align-items: flex-start;
+          }
+
+          .icon-circle {
+               min-width: 42px;
+               width: 42px;
+               height: 42px;
+               border-radius: 50%;
+               background: var(--lake-soft);
+               color: var(--lake-primary);
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               font-size: 18px;
+          }
+
+          .symptom-card h4,
+          .process-card h4,
+          .photo-card h4 {
+               color: #253846;
+               font-size: 17px;
+               font-weight: 800;
+               line-height: 1.45;
+               margin: 0 0 8px;
+          }
+
+          .symptom-card p,
+          .process-card p,
+          .photo-card p {
+               color: #666666;
+               font-size: 14.5px;
+               line-height: 1.75;
+               margin: 0;
+          }
+
+          .process-number {
+               display: inline-flex;
+               width: 34px;
+               height: 34px;
+               border-radius: 50%;
+               align-items: center;
+               justify-content: center;
+               background: var(--lake-primary);
+               color: #ffffff;
+               font-weight: 800;
+               margin-bottom: 14px;
+          }
+
+          .care-list {
+               list-style: none;
+               padding-left: 0;
+               margin: 0;
+          }
+
+          .care-list li {
+               position: relative;
+               padding-left: 30px;
+               margin-bottom: 14px;
+               color: #555555;
+               font-size: 15.5px;
+               line-height: 1.75;
+          }
+
+          .care-list li::before {
+               content: "\f00c";
+               font-family: FontAwesome;
+               position: absolute;
+               left: 0;
+               top: 0;
+               color: var(--lake-primary);
+          }
+
+          .photo-card {
+               padding: 0;
+               overflow: hidden;
+          }
+
+          .photo-card img {
+               width: 100%;
+               height: 210px;
+               object-fit: cover;
+               display: block;
+          }
+
+          .photo-card .photo-text {
+               padding: 22px;
+          }
+
+          .cta-box {
+               background: linear-gradient(135deg, var(--lake-primary) 0%, var(--lake-primary-dark) 100%);
+               color: #ffffff;
+               border-radius: 22px;
+               padding: 38px 32px;
+               text-align: center;
+               margin-bottom: 34px;
+               box-shadow: 0 14px 32px rgba(26, 91, 130, 0.16);
+          }
+
+          .cta-box h3 {
+               color: #ffffff;
+               font-size: 24px;
+               font-weight: 800;
+               line-height: 1.4;
+               margin: 0 0 12px;
+          }
+
+          .cta-box p {
+               color: #e8f3f8;
+               font-size: 16px;
+               line-height: 1.75;
+               margin-bottom: 22px;
+          }
+
+          .btn-call-main,
+          .btn-call-main:hover,
+          .btn-call-main:focus {
+               display: inline-block;
+               background: #ffffff;
+               color: var(--lake-primary) !important;
+               border-radius: 8px;
+               padding: 13px 32px;
+               font-weight: 800;
+               text-decoration: none;
+          }
+
+          .side-col {
+               position: -webkit-sticky;
+               position: sticky;
+               top: 110px;
+               align-self: flex-start;
+               height: fit-content;
+               z-index: 20;
+               margin-bottom: 40px;
+          }
+
+          .side-card {
+               background: #ffffff;
+               padding: 30px 28px;
+               border-radius: 18px;
+               border: 1px solid var(--lake-border);
+               box-shadow: 0 10px 30px rgba(26, 91, 130, 0.08);
+          }
+
+          .side-card h4 {
+               color: var(--lake-primary-dark);
+               font-size: 21px;
+               font-weight: 800;
+               line-height: 1.45;
+               margin-top: 0;
+               margin-bottom: 14px;
+          }
+
+          .side-card>p {
+               color: #666666;
+               font-size: 14.5px;
+               line-height: 1.7;
+               margin-bottom: 20px;
+          }
+
+          .side-mini {
+               margin-bottom: 17px;
+          }
+
+          .side-mini strong {
+               display: block;
+               color: #243847;
+               font-size: 14.5px;
+               margin-bottom: 6px;
+          }
+
+          .side-mini p {
+               color: #666666;
+               font-size: 13.5px;
+               line-height: 1.6;
+               margin-bottom: 0;
+          }
+
+          .side-banner {
+               border-radius: 12px;
+               overflow: hidden;
+               margin: 22px 0;
+               box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+          }
+
+          .side-banner img {
+               width: 100%;
+               display: block;
+          }
+
+          .btn-side-call,
+          .btn-side-call:hover,
+          .btn-side-call:focus {
+               display: block;
+               width: 100%;
+               background: var(--lake-primary);
+               border: 1px solid var(--lake-primary);
+               color: #ffffff !important;
+               font-size: 15px;
+               font-weight: 800;
+               padding: 13px 0;
+               border-radius: 8px;
+               text-align: center;
+               text-decoration: none;
+               margin-bottom: 10px;
+          }
+
+          .btn-side-sub,
+          .btn-side-sub:hover,
+          .btn-side-sub:focus {
+               display: block;
+               width: 100%;
+               background: #fff8f1;
+               border: 1px solid #f2d7bd;
+               color: var(--lake-accent) !important;
+               font-size: 15px;
+               font-weight: 800;
+               padding: 13px 0;
+               border-radius: 8px;
+               text-align: center;
+               text-decoration: none;
+          }
+
+          .opening-hours span {
+               float: right;
+          }
+
+          @media (max-width: 991px) {
+               .detail-row {
+                    display: block;
+               }
+
+               .side-col {
+                    position: static;
+                    top: auto;
+                    height: auto;
+               }
+
+               .page-hero {
+                    padding: 34px 26px;
+               }
+
+               .page-hero h1 {
+                    font-size: 30px;
+               }
+          }
+
+          @media (max-width: 767px) {
+               #root-canal-detail {
+                    padding: 38px 0;
+               }
+
+               .page-hero {
+                    border-radius: 18px;
+                    padding: 30px 22px;
+               }
+
+               .page-hero h1 {
+                    font-size: 27px;
+               }
+
+               .page-hero p,
+               .section-desc {
+                    font-size: 15.5px;
+               }
+
+               .implant-box {
+                    padding: 28px 22px;
+                    border-radius: 18px;
+               }
+
+               .section-title {
+                    font-size: 23px;
+               }
+
+               .photo-card img {
+                    height: auto;
+               }
+          }
+     </style>
+</head>
+
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <section class="preloader">
+          <div class="spinner">
+               <span class="spinner-rotate"></span>
+          </div>
+     </section>
+
+     <header>
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-4 col-sm-5">
+                         <p>YONSEI LAKE DENTAL CLINIC</p>
+                    </div>
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 031-378-7522</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 평일 10:00 - 19:00</span>
+                         <i class="fa fa-map-marker"></i> <a href="index.html#google-map"> 레이크꼬모 310호</a>
+                    </div>
+               </div>
+          </div>
+     </header>
+
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <a href="index.html" class="navbar-brand"
+                         style="display: inline-flex !important; align-items: center; height: 50px; padding-top: 12px !important; padding-bottom: 12px !important; margin-top: 3px !important; position: relative !important; z-index: 999 !important;">
+                         <img src="images/logo.png" alt="로고"
+                              style="width: 40px; height: auto; display: block; flex-shrink: 0; margin-right: 7px;">
+
+                         <div class="brand-text"
+                              style="display: inline-block; line-height: 1.2; vertical-align: middle;">
+                              연세레이크치과
+                              <span class="eng-logo" style="display: block;">YONSEI LAKE DENTAL CLINIC</span>
+                         </div>
+                    </a>
+               </div>
+
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="index.html">홈</a></li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">레이크소개 <i
+                                        class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="index.html#about">의료진 소개</a></li>
+                                   <li><a href="index.html#team">병원 소개</a></li>
+                              </ul>
+                         </li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">임플란트 <i
+                                        class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="clean01-01.html">연세레이크 임플란트</a></li>
+                                   <li><a href="clean01-02.html">임플란트 한눈에 보기</a></li>
+                                   <li><a href="clean01-03.html">상악동 거상술</a></li>
+                                   <li><a href="clean01-04.html">발치 즉시 임플란트</a></li>
+                              </ul>
+                         </li>
+
+                         <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">진료과목 <i
+                                        class="fa fa-angle-down"></i></a>
+                              <ul class="dropdown-menu">
+                                   <li><a href="clean02.html">일반 치료</a></li>
+                                   <li><a href="clean03.html">신경 치료</a></li>
+                                   <li><a href="clean04.html">사랑니 발치</a></li>
+                                   <li><a href="clean05.html">심미 보철 치료</a></li>
+                                   <li><a href="clean06.html">턱관절 치료</a></li>
+                              </ul>
+                         </li>
+
+                         <li><a href="index.html#google-map">오시는 길</a></li>
+
+                         <li class="appointment-btn">
+                              <a href="tel:0313787522">전화 예약하기</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+     </section>
+
+
+     <section id="root-canal-detail" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row detail-row">
+
+                    <div class="col-md-8 col-sm-7">
+
+                         <div class="page-hero wow fadeInUp" data-wow-delay="0.1s">
+                              <span class="eyebrow">ROOT CANAL TREATMENT</span>
+                              <h1>자연치아를 최대한 보존하기 위한<br>정밀 신경 치료</h1>
+                              <p>
+                                   신경 치료는 감염되거나 손상된 치아 내부 조직을 제거하고 치근관을 세척·소독한 뒤 밀폐해,
+                                   가능한 한 자연치아를 오래 사용할 수 있도록 돕는 치료입니다.
+                              </p>
+                              <div class="hero-points">
+                                   <span><i class="fa fa-check-circle"></i> 자연치아 보존 중심</span>
+                                   <span><i class="fa fa-search"></i> 꼼꼼한 진단</span>
+                                   <span><i class="fa fa-heart"></i> 통증 부담 완화</span>
+                              </div>
+                         </div>
+
+                         <div class="implant-box no-card wow fadeInUp" data-wow-delay="0.15s">
+                              <div class="news-image">
+                                   <img src="images/produce-03.png" class="img-responsive" alt="신경치료 진료 이미지"
+                                        loading="lazy">
+                                   <p class="image-caption">치아 내부 감염 상태와 통증 원인을 확인한 뒤 필요한 치료 범위를 안내합니다.</p>
+                              </div>
+                         </div>
+
+                         <div class="implant-box wow fadeInUp" data-wow-delay="0.2s">
+                              <h2 class="section-title"><i class="fa fa-bookmark"></i> 신경 치료란?</h2>
+                              <p class="lead-copy">치아를 뽑기 전, 자연치아를 살릴 수 있는지 먼저 확인하는 치료입니다.</p>
+                              <p class="section-desc">
+                                   충치가 깊어지거나 외상으로 치아가 손상되면 치아 안쪽의 신경과 혈관 조직에 염증이 생길 수 있습니다.
+                                   이때 감염된 조직을 제거하고 내부를 소독한 뒤 밀폐하여 통증을 줄이고 치아 기능을 보존하는 치료가 신경 치료입니다.
+                              </p>
+                              <div class="notice-box">
+                                   신경 치료가 필요한지는 증상만으로 단정하기 어렵습니다. X-ray, 구강검사, 통증 반응 검사 등을 통해 치아 상태를 확인한 뒤
+                                   치료 여부와 횟수를 안내받는 것이 좋습니다.
+                              </div>
+                         </div>
+
+                         <div class="implant-box wow fadeInUp" data-wow-delay="0.25s">
+                              <h2 class="section-title"><i class="fa fa-exclamation-circle"></i> 이런 증상이 있다면 확인이 필요합니다
+                              </h2>
+                              <p class="section-desc">
+                                   아래 증상이 반복되거나 점점 심해진다면 충치가 신경 가까이 진행되었거나 치아 내부 염증이 생겼을 수 있습니다.
+                              </p>
+
+                              <div class="symptom-grid">
+                                   <div class="col-md-6 col-sm-6 symptom-item">
+                                        <div class="symptom-card">
+                                             <div class="icon-circle"><i class="fa fa-bolt"></i></div>
+                                             <div>
+                                                  <h4>찌릿한 통증이 오래 지속될 때</h4>
+                                                  <p>찬물이나 뜨거운 음식에 반응한 통증이 쉽게 가라앉지 않는 경우입니다.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-6 col-sm-6 symptom-item">
+                                        <div class="symptom-card">
+                                             <div class="icon-circle"><i class="fa fa-moon-o"></i></div>
+                                             <div>
+                                                  <h4>밤에 욱신거림이 심할 때</h4>
+                                                  <p>가만히 있어도 아프거나 누웠을 때 통증이 심해지는 경우 확인이 필요합니다.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-6 col-sm-6 symptom-item">
+                                        <div class="symptom-card">
+                                             <div class="icon-circle"><i class="fa fa-search-plus"></i></div>
+                                             <div>
+                                                  <h4>충치가 깊게 진행된 경우</h4>
+                                                  <p>충치가 치아 내부까지 가까워지면 신경 치료가 필요할 수 있습니다.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-6 col-sm-6 symptom-item">
+                                        <div class="symptom-card">
+                                             <div class="icon-circle"><i class="fa fa-medkit"></i></div>
+                                             <div>
+                                                  <h4>치아가 깨지거나 금이 간 경우</h4>
+                                                  <p>외상으로 신경이 노출되었거나 염증이 생긴 경우에는 빠른 진단이 중요합니다.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="implant-box no-card wow fadeInUp" data-wow-delay="0.25s">
+                              <div class="news-image">
+                                   <img src="images/im03-02.png" class="img-responsive" alt="신경치료 설명 이미지"
+                                        loading="lazy">
+                              </div>
+                         </div>
+
+                         <div class="implant-box wow fadeInUp" data-wow-delay="0.3s">
+                              <h2 class="section-title"><i class="fa fa-list-ol"></i> 신경 치료 과정</h2>
+                              <p class="section-desc">
+                                   치아 상태와 염증 정도에 따라 치료 횟수와 방식은 달라질 수 있습니다.
+                                   연세레이크치과는 필요한 과정을 충분히 설명하고 치료를 진행합니다.
+                              </p>
+
+                              <div class="process-grid">
+                                   <div class="col-md-4 col-sm-6 process-item">
+                                        <div class="process-card">
+                                             <span class="process-number">1</span>
+                                             <h4>정밀 진단</h4>
+                                             <p>X-ray와 구강검사로 충치 깊이, 뿌리 상태, 염증 범위를 확인합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-4 col-sm-6 process-item">
+                                        <div class="process-card">
+                                             <span class="process-number">2</span>
+                                             <h4>감염 조직 제거</h4>
+                                             <p>치아 내부의 감염된 신경 조직을 제거하고 치근관 내부를 세척합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-4 col-sm-6 process-item">
+                                        <div class="process-card">
+                                             <span class="process-number">3</span>
+                                             <h4>소독 및 밀폐</h4>
+                                             <p>재감염을 줄이기 위해 내부를 소독한 뒤 충전재로 빈 공간을 채웁니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-4 col-sm-6 process-item">
+                                        <div class="process-card">
+                                             <span class="process-number">4</span>
+                                             <h4>보철 계획</h4>
+                                             <p>치아 손상 정도에 따라 레진, 인레이, 크라운 등 필요한 보철을 안내합니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-4 col-sm-6 process-item">
+                                        <div class="process-card">
+                                             <span class="process-number">5</span>
+                                             <h4>크라운 보호</h4>
+                                             <p>약해진 치아를 보호하기 위해 필요한 경우 크라운으로 치아를 감싸줍니다.</p>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-4 col-sm-6 process-item">
+                                        <div class="process-card">
+                                             <span class="process-number">6</span>
+                                             <h4>정기 검진</h4>
+                                             <p>치료 후 불편감과 교합 상태를 확인하고 구강 관리 방법을 안내합니다.</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="implant-box wow fadeInUp" data-wow-delay="0.35s">
+                              <h2 class="section-title"><i class="fa fa-shield"></i> 신경 치료 후 관리가 중요한 이유</h2>
+                              <p class="section-desc">
+                                   신경 치료가 끝난 치아는 이전보다 약해질 수 있어, 씹는 힘과 균열 위험을 고려한 보호와 관리가 필요합니다.
+                              </p>
+                              <ul class="care-list">
+                                   <li>치료 중인 치아로 딱딱하거나 질긴 음식을 씹는 것은 피하는 것이 좋습니다.</li>
+                                   <li>치료가 끝난 뒤에도 필요 시 크라운 등 보철 치료를 통해 치아 파절 위험을 줄여야 합니다.</li>
+                                   <li>통증이 줄었다고 치료를 중단하면 내부 감염이 다시 진행될 수 있어 계획된 내원을 지키는 것이 중요합니다.</li>
+                                   <li>정기 검진과 올바른 칫솔질, 치실 사용으로 재감염 가능성을 낮추는 관리가 필요합니다.</li>
+                              </ul>
+                         </div>
+
+                         <div class="implant-box wow fadeInUp" data-wow-delay="0.4s">
+                              <h2 class="section-title"><i class="fa fa-camera"></i>연세레이크치과의 특별함</h2>
+                              <!--<p class="section-desc">
+                                   아래 이미지는 병원 실제 진료실, 디지털 장비, 상담 공간 사진으로 교체해 사용하면 신뢰감을 높일 수 있습니다.
+                              </p>-->
+
+                              <div class="photo-grid">
+                                   <div class="col-md-6 col-sm-6 photo-item">
+                                        <div class="photo-card">
+                                             <!-- 사진 1 교체 위치: images/root_canal_ct.jpg -->
+                                             <img src="images/root_canal_ct.png" alt="신경치료 정밀 진단 장비" loading="lazy">
+                                             <div class="photo-text">
+                                                  <h4>꼼꼼한 진단</h4>
+                                                  <p>증상과 치아 상태를 함께 확인해 필요한 치료 범위를 안내합니다.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="col-md-6 col-sm-6 photo-item">
+                                        <div class="photo-card">
+                                             <!-- 사진 2 교체 위치: images/root_canal_care.jpg -->
+                                             <img src="images/room2.jpg" alt="신경치료 상담 및 진료 공간" loading="lazy">
+                                             <div class="photo-text">
+                                                  <h4>편안한 진료</h4>
+                                                  <p>프라이빗 시술실에서 환자의 편안함을 제공합니다.</p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="cta-box wow fadeInUp" data-wow-delay="0.45s">
+                              <h3>치통이 반복된다면 미루지 말고 확인해보세요</h3>
+                              <p>
+                                   통증이 사라졌다고 해서 치아 내부 문제가 해결된 것은 아닐 수 있습니다.
+                                   정확한 진단을 통해 자연치아를 보존할 수 있는 방법을 안내해드립니다.
+                              </p>
+                              <a href="tel:0313787522" class="btn-call-main"><i class="fa fa-phone"
+                                        style="margin-right: 6px;"></i> 전화 상담하기</a>
+                         </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-sm-5 side-col">
+                         <div class="side-card">
+                              <h4>통증 부담은 줄이고,<br>자연치아는 최대한 보존</h4>
+                              <p>
+                                   신경 치료가 필요한지 먼저 확인하고, 치아를 살릴 수 있는 방향부터 신중하게 안내합니다.
+                              </p>
+
+                              <hr style="border-top: 1px dashed #cddce6; margin: 20px 0;">
+
+                              <div class="side-mini">
+                                   <strong><i class="fa fa-search" style="color:#1a5b82;"></i> 정밀한 상태 확인</strong>
+                                   <p>통증 원인과 치아 내부 상태를 확인한 뒤 필요한 치료를 설명합니다.</p>
+                              </div>
+                              <div class="side-mini">
+                                   <strong><i class="fa fa-heart" style="color:#1a5b82;"></i> 통증 부담 완화</strong>
+                                   <p>환자분의 불편감을 줄이기 위해 마취와 진료 과정을 세심하게 진행합니다.</p>
+                              </div>
+                              <div class="side-mini">
+                                   <strong><i class="fa fa-shield" style="color:#1a5b82;"></i> 치료 후 관리 안내</strong>
+                                   <p>치료 후 주의사항과 재감염 예방을 위한 관리 방법을 안내합니다.</p>
+                              </div>
+
+                              <!--
+                              <div class="side-banner">
+                                   사이드 상담 이미지 교체 위치: images/root_canal_sidebar.jpg
+                                   <img src="images/root_canal_sidebar.jpg" alt="연세레이크치과 신경치료 상담 안내" loading="lazy">
+                              </div>-->
+
+                              <a href="tel:0313787522" class="btn-side-call"><i class="fa fa-phone"
+                                        style="margin-right:4px;"></i> 빠른 전화 상담</a>
+                              <!--<a href="tel:0313787522" class="btn-side-sub"><i class="fa fa-calendar-check-o"
+                                        style="margin-right:4px;"></i> 상담 예약하기</a>-->
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">연세레이크치과</h4>
+                              <p>환자분의 자연치아를 소중히 여기며, 정직하고 바른 진료를 약속드립니다. 언제나 편안하게 방문할 수 있는 치과가 되겠습니다.</p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 031-378-7522</p>
+                                   <p><i class="fa fa-map-marker"></i> 경기 화성시 동탄대로 181 레이크꼬모 310호</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">빠른 링크</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="index.html#about">
+                                             <h5>의료진 소개</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="index.html#news">
+                                             <h5>주요 진료 과목</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                              <div class="latest-stories">
+                                   <div class="stories-info" style="margin-left: 0;">
+                                        <a href="tel:0313787522">
+                                             <h5>전화 예약하기</h5>
+                                        </a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">진료 시간</h4>
+                                   <p>평일 <span>10:00 AM - 07:00 PM</span></p>
+                                   <p>야간진료(목) <span>10:00 AM - 09:00 PM</span></p>
+                                   <p>토요일 <span>10:00 AM - 02:00 PM</span></p>
+                                   <p>점심시간 <span>01:00 PM - 02:00 PM</span></p>
+                                   <p>수요일/일요일 <span>휴진</span></p>
+                              </div>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="#" class="fa fa-pencil-square"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-9 col-sm-9">
+                              <div class="clinic-legal-info" style="font-size: 13px; line-height: 1.9; color: #777;">
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">의료기관 명칭</strong> : 연세레이크치과의원
+                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
+                                        <strong style="color:#555;">대표자 성명</strong> : 김태원
+                                   </p>
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
+                                   </p>
+                                   <p style="margin: 0;">
+                                        <strong style="color:#555;">사업자등록번호</strong> : 578-07-03168
+                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
+                                        <a href="nonpay.html"
+                                             style="color:#392679; font-weight:700; text-decoration: underline;">비급여 수가표
+                                             보기</a>
+                                   </p>
+                              </div>
+                         </div>
+                         <div class="col-md-3 col-sm-3 text-align-right" style="text-align: right;">
+                              <div class="angle-up-btn">
+                                   <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i
+                                             class="fa fa-angle-up"></i> UP</a>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+
+</html>

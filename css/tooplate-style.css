@@ -1,0 +1,1817 @@
+/*
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+*/
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+body {
+  background: #ffffff;
+  font-family:
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  overflow-x: hidden;
+}
+
+/*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -1px;
+}
+
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  color: #252525;
+  font-size: 5em;
+}
+
+h2 {
+  color: #272727;
+  font-size: 3em;
+  padding-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.8em;
+  line-height: 1.2em;
+  margin-bottom: 0;
+}
+
+h4 {
+  color: #454545;
+  font-size: 1.8em;
+  padding-bottom: 2px;
+}
+
+h6 {
+  letter-spacing: 0;
+  font-weight: normal;
+}
+
+p {
+  color: #757575;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+/*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: #252525;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: #a5c422;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #000000;
+}
+
+.section-title {
+  padding-bottom: 20px;
+}
+
+.section-title h2 {
+  margin-top: 0;
+}
+
+.section-btn {
+  background: #a5c422;
+  border: 0;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: inherit;
+  font-weight: 500;
+  padding: 14px 20px;
+  transition: transform 0.1s ease-in;
+  transform: translateX(0);
+}
+
+.section-btn:hover {
+  transform: translateY(-5px);
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.border-top {
+  border-top: 1px solid #f2f2f2;
+  margin-top: 4em;
+  padding-top: 2.5em;
+}
+
+.btn-gray {
+  background: #393939;
+}
+
+.btn-blue {
+  background: #4267b2;
+}
+
+.news-thumb {
+  background: #ffffff;
+  border-radius: 10px;
+}
+.news-thumb img {
+  border-radius: 10px 10px 0 0;
+}
+
+.news-info {
+  padding: 30px;
+  text-align: left;
+}
+.news-info span {
+  display: block;
+  letter-spacing: 0.5px;
+}
+.news-info h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.author {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1.5em;
+  margin-top: 2em;
+}
+.author img,
+.author .author-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.author-info h5 {
+  margin-bottom: 0;
+}
+.author img {
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+#about,
+#team,
+#news,
+#news-detail {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#news,
+#service {
+  text-align: center;
+}
+
+#google-map {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------------------------
+       PRE LOADER              
+  -----------------------------------------*/
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background: none repeat scroll 0 0 #ffffff;
+}
+
+.spinner {
+  border: 1px solid transparent;
+  border-radius: 3px;
+  position: relative;
+}
+
+.spinner:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 45px;
+  height: 45px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 1px solid #575757;
+  border-top-color: #ffffff;
+  animation: spinner 0.9s linear infinite;
+}
+
+@-webkit-@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*---------------------------------------
+      MENU              
+  -----------------------------------------*/
+
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  height: 45px;
+}
+
+header .col-md-8 {
+  padding-right: 0;
+}
+
+header p,
+header span {
+  font-size: 12px;
+  line-height: 24px;
+  padding-top: 12px;
+}
+
+header a,
+header span {
+  color: #747474;
+}
+
+header span {
+  font-weight: 500;
+  display: inline-block;
+  padding: 11px 15px;
+}
+
+header span.date-icon {
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  padding-right: 19px;
+  padding-left: 19px;
+}
+
+header span i {
+  color: #a5c422;
+  margin-right: 5px;
+}
+
+/*---------------------------------------
+      MENU              
+  -----------------------------------------*/
+
+.navbar-default {
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.075);
+  border: none;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+/* 네비게이터 색*/
+.navbar-default .navbar-brand {
+  color: #003274;
+  font-weight: 500;
+}
+
+.navbar-default .navbar-brand .fa {
+  color: #a5c422;
+}
+
+.navbar-default .navbar-nav li.appointment-btn {
+  margin: 3px 0 0 20px;
+}
+
+.navbar-default .navbar-nav li.appointment-btn a {
+  background: #a5c422;
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: 600;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.navbar-default .navbar-nav li.appointment-btn a:hover {
+  background: #4267b2;
+  color: #ffffff !important;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #555555;
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 20px;
+  padding-left: 20px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.navbar-default .navbar-nav > li a:hover {
+  color: #393939 !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #555555;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #393939;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle {
+  border: none;
+  padding-top: 10px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background: #393939;
+  border-color: transparent;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+/*---------------------------------------
+      HOME              
+  -----------------------------------------*/
+
+#home h1 {
+  color: #ffffff;
+  padding-bottom: 10px;
+  margin-top: 0;
+}
+
+#home h3 {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: inherit;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.slider .container {
+  width: 100%;
+}
+
+.slider .owl-dots {
+  position: absolute;
+  top: 575px;
+  width: 100%;
+  justify-content: center;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  margin: 5px 7px;
+  border: 2px solid #d9d9d9;
+  background: transparent;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: #ffffff;
+  border-color: transparent;
+}
+
+.slider .caption {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(20, 20, 20, 0.2);
+  height: 100%;
+  color: #fff;
+  cursor: e-resize;
+}
+
+.slider .item {
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  height: 650px;
+}
+
+.slider .item-first {
+  background-image: url(../images/SOI.jpg);
+}
+
+.slider .item-second {
+  background-image: url(../images/im04-01.png);
+}
+
+.slider .item-third {
+  background-image: url(../images/room2.jpg);
+}
+
+/*---------------------------------------
+      ABOUT              
+  -----------------------------------------*/
+
+/* #about {
+    background: url('../images/main-01.jpg') no-repeat center center;
+    background-size: 100% auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }*/
+
+.profile img,
+.profile figcaption {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1em;
+}
+.profile img {
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+  margin-right: 1em;
+}
+.profile figcaption h3 {
+  margin-top: 0;
+}
+
+#about h6 {
+  color: #858585;
+  margin: 0;
+}
+
+/*---------------------------------------
+      TEAM MEMBERS              
+  -----------------------------------------*/
+
+.team-thumb {
+  background-color: #f9f9f9;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.team-info {
+  padding: 20px 30px 0 30px;
+}
+
+.team-contact-info {
+  border-top: 1px solid #e9e9e9;
+  padding-top: 1.2em;
+  margin-top: 1.5em;
+}
+
+.team-contact-info .fa {
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.team-contact-info p {
+  margin-bottom: 2px;
+}
+
+.team-contact-info a {
+  color: #757575;
+}
+
+.team-thumb .social-icon li {
+  font-weight: 500;
+}
+
+.team-thumb .social-icon li a {
+  background: #ffffff;
+  border-radius: 100%;
+  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 2px 0 2px;
+}
+
+.team-thumb .social-icon {
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 0.5s 0.2s;
+  text-align: center;
+  position: relative;
+  top: 0;
+}
+
+.team-thumb:hover .social-icon {
+  opacity: 1;
+  transition-delay: 0.3s;
+  transform: translateY(0px);
+  top: -22em;
+}
+
+/*---------------------------------------
+     SERVICE              
+  -----------------------------------------*/
+
+#service {
+  background: #a5c422;
+}
+
+#service h2,
+#service h4 {
+  color: #ffffff;
+}
+
+#service p {
+  color: #d9d9d9;
+}
+
+#service .service-thumb {
+  padding: 0 22px;
+}
+
+#service .fa {
+  font-size: 50px;
+  margin-bottom: 10px;
+  background: #ffffff;
+  color: #a5c422;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 100%;
+}
+
+/*---------------------------------------
+      NEWS             
+  -----------------------------------------*/
+
+#news,
+#news-detail {
+  background: #f9f9f9;
+}
+
+#news-detail blockquote {
+  margin: 30px 0;
+}
+
+.news-detail-thumb .news-image img {
+  border-radius: 10px;
+}
+
+.news-detail-thumb h3 {
+  margin-bottom: 8px;
+}
+
+.news-image {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.news-image img {
+  width: 100%;
+}
+
+.news-detail-thumb ul {
+  margin: 32px 12px 22px 0px;
+}
+
+.news-detail-thumb ul li {
+  list-style: circle;
+  font-weight: normal;
+  padding: 6px 12px 6px 0px;
+}
+
+.news-sidebar {
+  margin-top: 16px;
+}
+
+.news-social-share {
+  text-align: center;
+  padding-top: 22px;
+}
+
+.news-social-share .btn {
+  border-radius: 100px;
+  border: none;
+  font-size: 10px;
+  font-weight: 600;
+  margin: 2px 6px;
+  padding: 8px 14px;
+}
+
+.news-social-share .btn-primary {
+  background: #3b5998;
+}
+
+.news-social-share .btn-success {
+  background: #1da1f2;
+}
+
+.news-social-share .btn-danger {
+  background: #dd4b39;
+}
+
+.news-social-share a .fa {
+  padding-right: 4px;
+}
+
+.recent-post {
+  padding-top: 2px;
+  padding-bottom: 18px;
+}
+
+.recent-post .media img {
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  margin-right: 5px;
+}
+
+.recent-post .media-heading {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: inherit;
+  margin-top: 5px;
+}
+
+.news-categories {
+  margin-top: 8px;
+}
+
+.news-categories li a {
+  color: #2b2b2b;
+}
+
+.news-ads {
+  background: #ffffff;
+  border-right: 4px solid #2b2b2b;
+  padding: 42px;
+  text-align: center;
+  margin: 26px 0 26px 0;
+}
+
+.news-ads.sidebar-ads {
+  border-left: 4px solid #2b2b2b;
+  border-right: 0px;
+}
+
+.news-ads h4 {
+  font-size: 18px;
+}
+
+.news-tags h4 {
+  padding-bottom: 6px;
+}
+
+.news-categories li,
+.news-tags li {
+  list-style: none;
+  display: inline-block;
+  margin: 4px;
+}
+
+.news-tags li a {
+  background: #393939;
+  border-radius: 50px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  float: left;
+  min-width: 30px;
+  padding: 6px 12px;
+  -webkit-transition: all ease-in-out 0.4s;
+  transition: all ease-in-out 0.4s;
+}
+
+.news-tags li a:hover {
+  background: #4267b2;
+}
+
+/*---------------------------------------
+      APPOINTMENT             
+  -----------------------------------------*/
+
+#appointment {
+  padding-top: 100px;
+}
+
+#appointment label {
+  color: #393939;
+  font-weight: 500;
+}
+
+#appointment .form-control {
+  background: #f9f9f9;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  transition: all ease-in-out 0.4s;
+}
+
+#appointment input,
+#appointment select {
+  height: 45px;
+}
+
+#appointment button#cf-submit {
+  background: #a5c422;
+  color: #ffffff;
+  font-weight: 600;
+  height: 55px;
+}
+
+#appointment button#cf-submit:hover {
+  background: #393939;
+  color: #ffffff;
+}
+
+/*---------------------------------------
+     FOOTER              
+  -----------------------------------------*/
+
+footer {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+footer h4 {
+  padding-bottom: 5px;
+}
+
+footer a {
+  color: #757575;
+}
+
+footer a:hover {
+  color: #4267b2;
+}
+
+.contact-info {
+  padding-top: 10px;
+}
+
+.contact-info .fa {
+  background: #393939;
+  border-radius: 100%;
+  color: #ffffff;
+  font-size: 15px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 5px;
+  margin-bottom: 2px;
+}
+
+.latest-stories {
+  margin-bottom: 20px;
+}
+
+.stories-image,
+.stories-info {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.stories-image img {
+  border-radius: 100%;
+  width: 65px;
+  height: 65px;
+}
+
+.stories-info {
+  margin-left: 15px;
+}
+
+.stories-info h5 {
+  margin-bottom: 2px;
+}
+
+.stories-info span {
+  color: #858585;
+  font-size: 12px;
+}
+
+.opening-hours p {
+  line-height: 18px;
+}
+
+.opening-hours span {
+  font-weight: 500;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.copyright-text p,
+.footer-link a {
+  color: #858585;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer-link a {
+  font-size: 12px;
+  display: inline-block;
+  padding: 0 10px;
+  margin-top: 4px;
+}
+
+.angle-up-btn {
+  position: relative;
+  bottom: 4em;
+  display: block;
+}
+
+.angle-up-btn a {
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  font-size: 20px;
+  color: #393939;
+  display: inline-block;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  transition: transform 0.1s ease-in;
+  transform: translateX(0);
+}
+
+.angle-up-btn a:hover {
+  background: #4267b2;
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+/*---------------------------------------
+     SOCIAL ICON              
+  -----------------------------------------*/
+
+.social-icon {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icon li {
+  display: inline-block;
+  list-style: none;
+}
+
+.social-icon li a {
+  border-radius: 100px;
+  color: #464646;
+  font-size: 15px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+
+.social-icon li a:hover {
+  background: #4267b2;
+  color: #ffffff;
+}
+
+/*---------------------------------------
+     RESPONSIVE STYLES              
+  -----------------------------------------*/
+
+@media only screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+
+  header {
+    height: inherit;
+  }
+  header span.date-icon {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  header span.email-icon {
+    padding-top: 0;
+  }
+
+  .navbar-default .navbar-nav li a {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .slider .item {
+    background-position: center;
+  }
+
+  header {
+    padding-bottom: 10px;
+  }
+  header .text-align-right {
+    text-align: left;
+  }
+  header span {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .navbar-default .navbar-collapse,
+  .navbar-default .navbar-form {
+    border-color: transparent;
+  }
+  .navbar-default .navbar-nav li.appointment-btn {
+    margin-left: 15px;
+  }
+  .navbar-default .navbar-nav li a {
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .news-sidebar {
+    margin-top: 2em;
+  }
+
+  #appointment-form {
+    padding-top: 4em;
+    padding-bottom: 4em;
+  }
+
+  footer {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+  .footer-thumb {
+    padding-bottom: 10px;
+  }
+
+  .border-top {
+    text-align: center;
+  }
+
+  .copyright-text {
+    margin-top: 10px;
+  }
+
+  .angle-up-btn {
+    bottom: 10em;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+  }
+  h2 {
+    font-size: 2.1em;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+
+  #home h3 {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+}
+
+/* 상단 메뉴(네비게이션) 글씨 스타일 벤치마킹 적용 */
+.navbar-collapse .navbar-nav > li > a {
+  font-family: "Pretendard", sans-serif !important;
+  font-weight: 500 !important; /* 글씨 굵기 (기본) */
+  font-size: 16px !important; /* 글씨 크기 */
+  line-height: 26px !important; /* 위아래 여백(줄 간격) */
+}
+
+/* '온라인 예약하기' 버튼은 조금 더 눈에 띄게 (선택 사항) */
+.navbar-collapse .navbar-nav .appointment-btn a {
+  font-weight: 700 !important; /* 강조를 위해 굵게 처리 */
+  font-size: 16px !important;
+}
+
+/* 로고 영역 전체: 이미지와 글자 묶음을 옆으로 나열 */
+/* 로고 영역 전체: 이미지와 글자 묶음을 옆으로 나열 */
+.navbar-brand {
+  display: flex !important;
+  align-items: center !important; /* 이미지와 글자의 높낮이를 가운데로 맞춤 */
+  padding-top: 25px !important;
+  font-size: 25px !important; /* 한글 크기 유지 */
+  font-weight: 700 !important;
+}
+
+/* 🎯 [조절 포인트 1] 이미지와 글자 묶음 사이 간격 줄이기 */
+.navbar-brand img {
+  margin-right: 3px !important; /* 기존 7px에서 3px로 확 줄여 바짝 붙입니다. */
+}
+
+/* 글자 묶음: 한글과 영어를 위아래로 배치 */
+.brand-text {
+  display: flex !important;
+  flex-direction: column !important; /* 여기 안에서만 위아래 정렬 */
+  line-height: 1 !important; /* 위아래 간격을 더 촘촘하게 */
+  text-align: left !important;
+}
+
+/* 영어 로고 스타일 수정 */
+.eng-logo {
+  display: block !important;
+  font-size: 10.7px !important; /* 영어 크기 */
+  font-weight: 400 !important;
+  color: #3e618c !important;
+  margin-top: -1px !important; /* 한글과 더 바짝 붙임 */
+  letter-spacing: 0.2px !important; /* 자간 살짝 조절 */
+  font-family: "Pretendard", sans-serif !important;
+
+  /* 🎯 [조절 포인트 2] 영어를 한글 대비 살짝 오른쪽으로 들여쓰기 */
+  margin-left: 1.5px !important; /* 원하는 만큼 숫자 조절 가능 */
+}
+
+/* 네비게이션바 전체 영역 (버튼 위치의 기준점이 됩니다) */
+.navbar-collapse {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* =========================================
+   [그룹 1] 글씨 메뉴 (홈, 레이크 소개, 진료 과목 등) 
+   ========================================= */
+.navbar-nav {
+  display: flex !important;
+  align-items: center !important;
+  float: none !important;
+
+  /* 🎯 1. 글씨 메뉴 덩어리 전체 좌우 위치 */
+  /* 숫자를 늘리면 전체가 오른쪽으로, 줄이면 왼쪽으로 이동합니다. */
+  margin-left: 330px !important;
+}
+
+/* 일반 글씨 메뉴들의 개별 스타일 (버튼은 제외) */
+.navbar-nav > li:not(.appointment-btn) > a {
+  /* 🎯 2. 글씨 크기 */
+  font-size: 20px !important;
+
+  /* 🎯 3. 글씨 메뉴들 사이의 간격 (좌우 여백) */
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+
+  /* 🎯 4. 글씨 메뉴 위아래 위치 미세 조절 */
+  /* 아래로 내리려면 5px, 위로 올리려면 -5px 등 숫자를 변경하세요. */
+  margin-top: 0px !important;
+}
+
+/* =========================================
+   [그룹 2] 전화 예약하기 버튼 
+   ========================================= */
+.navbar-default .navbar-nav li.appointment-btn {
+  position: absolute !important; /* 글씨 메뉴들과 분리되어 따로 움직입니다 */
+
+  /* 🎯 5. 예약 버튼의 좌우 위치 */
+  /* 화면 맨 오른쪽 끝에서부터 얼마나 떨어질지 결정합니다. */
+  /* 0px이면 끝에 바짝 붙고, 숫자를 키울수록 왼쪽으로 들어옵니다. */
+  right: -20px !important;
+
+  /* 🎯 6. 예약 버튼 위아래 위치 미세 조절 */
+  top: 50% !important;
+  transform: translateY(-50%) !important; /* 기본적으로 정중앙에 위치하게 함 */
+  /* 위 설정(정중앙)에서 조금 더 위/아래로 움직이고 싶을 때 아래 숫자를 조절하세요. */
+  margin-top: 0px !important;
+}
+/* 전화 예약하기 버튼 안의 글씨 크기 및 디자인 조절 */
+.navbar-default .navbar-nav li.appointment-btn a {
+  /* 🎯 7. 예약 버튼 글씨 크기 */
+  font-size: 18px !important; /* 숫자를 키우면 글씨가 커집니다 */
+
+  /* 🎯 8. 예약 버튼 글씨 굵기 */
+  /* font-weight: 700 !important; 400(얇음) ~ 900(아주 굵음) 사이 조절 */
+
+  /* 🎯 9. 버튼 안쪽 여백 (버튼 자체의 크기가 커짐) */
+  padding-top: 12px !important; /* 위쪽 여백 */
+  padding-bottom: 12px !important; /* 아래쪽 여백 */
+  padding-left: 20px !important; /* 왼쪽 여백 */
+  padding-right: 20px !important; /* 오른쪽 여백 */
+}
+/* 모바일/태블릿 화면용 (화면이 좁아졌을 때 레이아웃 깨짐 방지) */
+/* =========================================
+   [모바일/태블릿 화면용 레이아웃 깨짐 방지 및 햄버거 메뉴 복구]
+   ========================================= */
+
+/* 태블릿 화면 (768px ~ 992px) */
+@media (max-width: 992px) {
+  .navbar-nav {
+    margin-left: 0 !important; /* 태블릿에선 여백을 줄여서 한 줄에 들어가게 함 */
+  }
+  .navbar-nav > li:not(.appointment-btn) > a {
+    font-size: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  /* 예약 버튼 위치 조정 */
+  .navbar-default .navbar-nav li.appointment-btn {
+    position: relative !important;
+    right: auto !important;
+    transform: none !important;
+    top: auto !important;
+    margin-top: 15px !important;
+    margin-left: 15px !important;
+  }
+}
+
+/* 모바일 화면 (767px 이하) - 여기서 화면 가림 현상을 고칩니다! */
+@media (max-width: 767px) {
+  /* 1. 햄버거 메뉴 밖으로 튀어나와 있던 걸 평소엔 숨깁니다 */
+  .navbar-collapse {
+    display: none !important;
+    width: 100% !important;
+  }
+
+  /* 2. 햄버거 버튼(三)을 눌렀을 때만 스르륵 열리게 만듭니다 */
+  .navbar-collapse.in {
+    display: block !important;
+  }
+
+  /* 3. 모바일에서는 메뉴들을 세로 한 줄로 깔끔하게 정렬합니다 */
+  .navbar-nav {
+    display: block !important;
+    margin-left: 0 !important;
+    float: none !important;
+  }
+
+  /* 4. 드롭다운(서브메뉴)이 모바일에서 가로로 너무 길어지는 것 방지 */
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    /* 추가: 모바일에서는 높이를 제한하지 않고 다 보여주도록 설정 */
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .navbar-nav .dropdown-menu::before {
+    display: none !important; /* 모바일에서는 말풍선 꼬리 숨김 */
+  }
+  .navbar-nav .dropdown-menu > li > a {
+    color: #555 !important; /* 모바일에서는 글씨가 잘 보이게 어둡게 */
+  }
+}
+/* =========================================
+   [드롭다운 하위 메뉴 가로 배치 + 위에서 아래로 스르륵 애니메이션]
+   ========================================= */
+
+/* 1. 마우스를 올렸을 때 (스르륵 내려옴) */
+.navbar-nav .dropdown:hover .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate(-50%, 0) !important;
+  pointer-events: auto !important;
+
+  /* 🎯 높이를 200px -> 500px로 늘렸습니다. (글씨가 길어지거나 줄바꿈될 때 세로 잘림 방지) */
+  max-height: 500px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+
+/* 2. 평상시 숨겨져 있을 때 */
+.navbar-nav .dropdown-menu {
+  display: flex !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 9999 !important;
+
+  transition: all 0.4s ease-in-out !important;
+  flex-direction: row !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+
+  transform: translate(-50%, 0) !important;
+
+  max-height: 0 !important;
+  overflow: hidden !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+
+  /* 🎯 핵심 수정: 750px -> 2000px 로 대폭 확장! (넓은 모니터에서 왼쪽 회색 칸 잘림 완벽 차단) */
+  padding-left: 2000px !important;
+  padding-right: 2000px !important;
+
+  background-color: #888888 !important;
+  border: none !important;
+  border-radius: 0px !important;
+  width: max-content !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+/* 3. 위로 뾰족한 말풍선 꼬리(삼각형) 만들기 */
+.navbar-nav .dropdown-menu::before {
+  content: "" !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border-width: 0 10px 10px 10px !important;
+  border-style: solid !important;
+  border-color: transparent transparent #888888 transparent !important;
+}
+
+/* 🎯 추가 4: 메인 메뉴와 서브 메뉴 사이의 "투명한 다리(Bridge)" 만들기 */
+/* 마우스를 좌우로 움직일 때 미세한 틈으로 마우스가 빠져 창이 닫히는 것을 완벽하게 막아줍니다. */
+.navbar-nav .dropdown-menu::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -20px !important; /* 위쪽 틈새를 모두 덮음 */
+  left: 0 !important;
+  width: 100% !important;
+  height: 20px !important;
+  background: transparent !important; /* 눈에 보이지 않는 투명 영역 */
+}
+
+/* 4. 서브 메뉴 내부의 각각의 글씨 항목 위치 */
+.navbar-nav .dropdown-menu > li {
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  float: none !important;
+}
+
+/* 5. 서브 메뉴 글씨 디자인 설정 */
+.navbar-nav .dropdown-menu > li > a {
+  font-size: 18px !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  white-space: nowrap !important;
+}
+
+/* 6. 서브 메뉴 글씨에 마우스 올렸을 때 효과 */
+.navbar-nav .dropdown-menu > li > a:hover {
+  color: #dddddd !important;
+  background: transparent !important;
+}
+/* 사이트 전체 글씨의 줄바꿈 기준을 단어로 설정 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span {
+  word-break: keep-all !important;
+  overflow-wrap: break-word !important;
+}
+/* PC에서는 이 줄바꿈을 숨깁니다 */
+.mobile-br {
+  display: none !important;
+}
+
+/* 모바일 화면(767px 이하)에서는 이 줄바꿈을 작동시킵니다 */
+/* =========================================
+   [모바일 화면 - 레이아웃 꼬임 방지 & 서브메뉴 적용]
+   ========================================= */
+@media (max-width: 767px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  .navbar-collapse {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 80% !important;
+    max-width: 320px !important;
+    height: 100vh !important;
+    background-color: #ffffff !important;
+    z-index: 99999 !important;
+    overflow-y: auto !important;
+    padding: 20px 0 !important;
+    transform: translateX(-120%) !important;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease !important;
+    box-shadow: none !important;
+  }
+
+  .navbar-collapse.in {
+    transform: translateX(0) !important;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.5) !important;
+  }
+
+  /* 🎯 에러 해결: 메뉴들이 무조건 세로 한 줄로 정렬되도록 Flex-column 강제 적용 */
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 0 !important;
+    padding: 10px 20px !important;
+    width: 100% !important;
+  }
+
+  .navbar-nav > li {
+    width: 100% !important; /* 가로 공간을 꽉 채우게 만듦 */
+    border-bottom: 1px solid #eeeeee !important;
+    margin: 0 !important;
+    float: none !important;
+  }
+
+  .navbar-nav > li > a {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 18px 5px !important;
+    font-size: 18px !important;
+    color: #222222 !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+  }
+  /* =====================================
+     [서브 메뉴 영역 및 글씨 강제 노출/위치 고정 - 최종 완결판]
+     ===================================== */
+
+  /* 🚨 평상시 & 터치했을 때(hover, open) 모두 PC의 넓은 여백과 이동 마법을 무력화 */
+  .navbar-nav .dropdown-menu,
+  .navbar-nav .dropdown:hover .dropdown-menu,
+  .navbar-nav .open .dropdown-menu,
+  .navbar-nav .show .dropdown-menu {
+    position: static !important;
+    transform: none !important; /* 👈 좌측으로 -50% 튕겨나가는 현상 완벽 차단! */
+    left: 0 !important;
+    padding: 0 !important; /* 👈 750px 회색 여백 제거! (화면 밖으로 밀림 방지) */
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: #f5f5f5 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* 닫혀있을 때 */
+  .navbar-nav .dropdown-menu {
+    display: block !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    transition: max-height 0.4s ease !important;
+  }
+
+  /* 열렸을 때 (공간 확보) */
+  .navbar-nav .open .dropdown-menu,
+  .navbar-nav .show .dropdown-menu,
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    max-height: 500px !important;
+  }
+
+  /* li (글씨를 감싸는 상자) PC 여백 초기화 */
+  .navbar-nav .dropdown-menu > li {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important; /* PC의 좌우 20px 여백 제거 */
+    padding: 0 !important;
+    float: none !important;
+  }
+
+  /* a (진짜 글씨) 설정 */
+  .navbar-nav .dropdown-menu > li > a {
+    display: block !important;
+    width: 100% !important;
+    color: #000000 !important; /* 확실한 검은색 */
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    padding: 15px 20px !important;
+    background: transparent !important;
+    white-space: normal !important; /* PC버전의 한 줄 고정(nowrap) 해제 */
+    transform: none !important;
+  }
+
+  /* 🎯 핵심 1: li 태그가 화면 밖으로 날아가지 않게 제자리에 묶어둠 */
+  .navbar-nav .dropdown-menu > li {
+    position: relative !important; /* absolute로 날아가는 것 완벽 차단 */
+    left: 0 !important; /* 왼쪽 화면 밖으로 간 것 강제 복귀 */
+    top: 0 !important;
+    right: auto !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  /* 🎯 핵심 2: a 태그(글씨) 위치 및 Z-index(레이어) 최상단 고정 */
+  .navbar-nav .dropdown-menu > li > a {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    color: #000000 !important; /* 완전 찐한 검은색 */
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    padding: 15px 20px !important; /* 클릭하기 편하게 안쪽 여백 추가 */
+    background: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-indent: 0 !important;
+    transform: none !important;
+    z-index: 999999 !important; /* 혹시 배경 뒤로 숨는 현상 방지 */
+  }
+
+  /* 🎯 핵심 2: a 태그(글씨) 위치 및 Z-index(레이어) 최상단 고정 */
+  .navbar-nav .dropdown-menu > li > a {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    color: #000000 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    padding: 15px 20px !important;
+    background: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    text-indent: 0 !important;
+    transform: none !important;
+    z-index: 999999 !important;
+  }
+} /* 👈 🚨 [매우 중요] 여기서 모바일 화면 설정(@media)을 확실하게 닫아줍니다!!! 기존에는 이 괄호가 없었습니다. */
+
+/* =========================================
+   [진료시간표 PC/모바일 그리드 설정]
+   ========================================= */
+
+/* 기본 (PC) : 2칸으로 나란히 배치 */
+.time-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* 모바일 (767px 이하) : 1칸으로 세로로 쌓이게 배치 */
+@media (max-width: 767px) {
+  .time-grid-container {
+    grid-template-columns: 1fr; /* 1칸으로 변경되어 자연스럽게 위아래로 떨어짐 */
+  }
+} /* 👈 범인 검거! 아까 이 괄호가 삭제되면서 아래 코드들이 전부 마비됐던 겁니다! */
+
+/* =========================================
+   [완결판] 모바일 상단 연락처 & 로고/메뉴 한 줄 정렬
+   ========================================= */
+@media (max-width: 767px) {
+  /* 1. 최상단 연락처 (전화, 시간, 위치) 무조건 한 줄로! */
+  header {
+    padding: 10px 0 !important;
+    overflow: hidden !important;
+  }
+
+  header .col-md-8,
+  header .col-sm-7,
+  header .text-align-right {
+    text-align: center !important;
+    white-space: nowrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  header span.phone-icon,
+  header span.date-icon,
+  header span.location-icon {
+    display: inline-block !important;
+    font-size: 11.5px !important;
+    letter-spacing: -0.5px !important;
+    border: none !important;
+    padding: 0 4px !important;
+    margin: 0 !important;
+  }
+
+  /* =========================================
+     2. 로고 & 햄버거 메뉴 (여백 대폭 축소 버전)
+     ========================================= */
+
+  /* 혹시 모를 바닥 기본 여백까지 싹 제거 */
+  .navbar-default {
+    margin-bottom: 0 !important;
+    border: none !important;
+  }
+
+  .navbar-default .navbar-header {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 45px !important; /* 👈 [핵심 1] 헤더 전체 높이를 85px -> 55px로 확 줄였습니다! */
+  }
+
+  /* 부트스트랩 방해꾼 제거 */
+  .navbar-default .navbar-header::before,
+  .navbar-default .navbar-header::after {
+    display: none !important;
+  }
+
+  /* 🎯 로고 수동 위치 설정 */
+  .navbar-default .navbar-header .navbar-brand {
+    position: absolute !important;
+    left: 3px !important;
+    top: -2px !important; /* 👈 [핵심 2] 천장이 낮아졌으니 로고도 위로 바짝 당겨 올립니다. */
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  /* 🎯 햄버거 메뉴 수동 위치 설정 */
+  .navbar-default .navbar-header .navbar-toggle {
+    position: absolute !important;
+    right: -30px !important;
+    top: 5px !important; /* 👈 [핵심 3] 햄버거 메뉴도 로고 높이에 맞춰 같이 올립니다. */
+    margin: 0 !important;
+    float: none !important;
+  }
+
+  /* 전화 예약하기 버튼: 흰색 여백 제거 및 크기 조절 */
+  .navbar-nav .appointment-btn {
+    margin: 0 !important;
+    padding: 0px 0px 12px 0px !important; /* 위, 우, 아래, 좌 여백 (아래쪽 여백이 더 필요하면 20px 숫자를 키우세요) */
+  }
+
+  .navbar-nav .appointment-btn a {
+    display: inline-block !important;
+    width: auto !important;
+    padding: 8px 15px !important; /* 초록색 버튼 안쪽 글씨 틈새 조절 */
+    margin: 0 !important; /* 버튼 바깥의 쓸데없는 흰색 여백 싹 제거 */
+    background-color: #aec653 !important;
+    color: #ffffff !important;
+    border-radius: 5px !important;
+  }
+  /* 진료 과목 세부사항이 나올 때 간격 조절 (선택사항) */
+  .dropdown-menu {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: #f9f9f9 !important; /* 세부 메뉴 배경색 구분 */
+  }
+}
+
+/* PC 화면(768px 이상)에서는 X 닫기 버튼 숨기기 */
+@media (min-width: 768px) {
+  .close-menu-x {
+    display: none !important;
+  }
+}
+
+/* 팝업 전용 스타일 */
+#mainPopup .modal-content {
+  animation: popupFadeIn 0.5s ease-out;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#mainPopup .modal-footer input[type="checkbox"] {
+  accent-color: #1a5b82; /* 치과 메인 컬러 */
+}
+
+.btn-close-text:hover {
+  color: #1a5b82 !important;
+  text-decoration: none;
+}
+
+/* =========================================
+   [일반·예방 진료 split 이미지 크기 조절]
+   - 이미지가 커지지 않는 문제는 max-height만 바꿔서 생깁니다.
+   - 아래 height 값을 조절하면 실제 이미지 영역 높이가 바뀝니다.
+   ========================================= */
+:root {
+  --split-image-height: 520px;
+  --split-image-padding: 7px;
+  --split-image-mobile-height: 420px;
+}
+
+.split-card {
+  align-items: stretch !important;
+}
+
+.split-card .split-image {
+  padding: 0 !important;
+  min-height: var(--split-image-height) !important;
+  height: var(--split-image-height) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #f6fbff !important;
+}
+
+.split-card .split-image img,
+.split-card .split-image .split-img {
+  width: 100% !important;
+  height: var(--split-image-height) !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+  padding: var(--split-image-padding) !important;
+  background: #f6fbff !important;
+}
+
+@media (max-width: 767px) {
+  .split-card .split-image {
+    min-height: var(--split-image-mobile-height) !important;
+    height: var(--split-image-mobile-height) !important;
+  }
+
+  .split-card .split-image img,
+  .split-card .split-image .split-img {
+    width: 100% !important;
+    height: var(--split-image-mobile-height) !important;
+    max-height: none !important;
+    object-fit: contain !important;
+    padding: var(--split-image-padding) !important;
+  }
+}
+
+.before-after-section {
+  padding: 38px 34px;
+  background: #ffffff;
+  border: 1px solid var(--lake-border);
+  border-radius: 20px;
+  box-shadow: 0 12px 34px rgba(74, 35, 90, 0.06);
+}
+
+.before-after-head {
+  margin-bottom: 26px;
+}
+
+.before-after-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.before-after-card {
+  position: relative;
+  flex: 1 1 calc(50% - 10px);
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f8f8f8;
+  border: 1px solid #eadce3;
+  box-shadow: 0 8px 24px rgba(74, 35, 90, 0.05);
+}
+
+.before-after-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.case-label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 8px 15px;
+  border-radius: 999px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.16);
+}
+
+.before-card .case-label {
+  background: rgba(74, 35, 90, 0.88);
+}
+
+.after-card .case-label {
+  background: rgba(183, 110, 121, 0.9);
+}
+
+.case-notice {
+  margin: 18px 0 0;
+  color: #888888;
+  font-size: 13.5px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .before-after-section {
+    padding: 28px 22px;
+  }
+
+  .before-after-grid {
+    display: block;
+  }
+
+  .before-after-card {
+    margin-bottom: 18px;
+  }
+
+  .before-after-card img {
+    height: 260px;
+  }
+}
