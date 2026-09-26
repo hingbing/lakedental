@@ -70,6 +70,23 @@
 })(jQuery);
 
 $(document).ready(function () {
+  var today = new Date();
+  var monthKey =
+    today.getFullYear() + "-" + ("0" + (today.getMonth() + 1)).slice(-2);
+  var popupImages = {
+    "2026-10": "images/popup_event_202610.png",
+    "2026-11": "images/popup_event_202611.png",
+    "2026-12": "images/popup_event_202612.png",
+  };
+  var $popupImage = $("#mainPopup .modal-body img");
+
+  if (popupImages[monthKey]) {
+    $popupImage.attr("src", popupImages[monthKey]);
+    $popupImage.on("error", function () {
+      $(this).attr("src", "images/popup_event.png");
+    });
+  }
+
   // 1. 로컬 스토리지 확인 (오늘 하루 보지 않기가 설정되어 있는지)
   var isHidden = localStorage.getItem("hideMainPopup");
   var now = new Date().getTime();
