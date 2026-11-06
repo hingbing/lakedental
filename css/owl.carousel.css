@@ -84,9 +84,6 @@
     float: right; }
 
 /* No Js */
-.no-js .owl-carousel {
-  display: block; }
-
 /*
  *  Owl Carousel - Animate Plugin
  */

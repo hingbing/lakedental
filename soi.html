@@ -10,13 +10,12 @@
      <meta name="author" content="연세레이크치과">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
      <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
      <link rel="stylesheet" href="css/tooplate-style.css">
+     <link rel="stylesheet" href="css/lake-common.css">
 
      <style>
           :root {
@@ -73,17 +72,6 @@
                padding-left: 25px;
           }
 
-          @keyframes fadeInDown {
-               from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-               }
-
-               to {
-                    opacity: 1;
-                    transform: translateY(0);
-               }
-          }
 
           #news-detail {
                padding: 60px 0 70px;
@@ -583,7 +571,7 @@
           }
 
           #osstem-line {
-               scroll-margin-top: 120px;
+               scroll-margin-top: calc(var(--nav-height, 90px) + 20px);
           }
 
           .side-mini p.one-line {
@@ -650,6 +638,12 @@
           .btn-reserve:hover {
                opacity: 0.92;
                color: #ffffff;
+          }
+
+          @media (min-width: 992px) {
+               .side-col {
+                    margin-bottom: 80px;
+               }
           }
 
           @media (max-width: 991px) {
@@ -733,6 +727,13 @@
                }
           }
      </style>
+     <script src="js/jquery.js" defer></script>
+     <script src="js/bootstrap.min.js" defer></script>
+     <script src="js/jquery.sticky.js" defer></script>
+     <script src="js/jquery.stellar.min.js" defer></script>
+     <script src="js/wow.min.js" defer></script>
+     <script src="js/smoothscroll.js" defer></script>
+     <script src="js/custom.js" defer></script>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -894,7 +895,7 @@
                               </p>
 
                               <div class="image-box">
-                                   <img src="images/soi.jpg" class="img-responsive" alt="오스템 SOI 및 BA 임플란트 정품 재료 안내 이미지"
+                                   <img src="images/SOI.jpg" class="img-responsive" alt="오스템 SOI 및 BA 임플란트 정품 재료 안내 이미지"
                                         loading="lazy">
                               </div>
                               <p class="caption">실제 사용 재료는 환자분의 구강 상태와 진단 결과에 따라 의료진 상담 후 결정됩니다.</p>
@@ -1015,7 +1016,7 @@
                               </p>
 
                               <div class="image-box">
-                                   <img src="images/im01-01.png" class="img-responsive" alt="연세레이크치과 임플란트 상담 이미지"
+                                   <img src="images/im01-01.jpg" class="img-responsive" alt="연세레이크치과 임플란트 상담 이미지"
                                         loading="lazy">
                               </div>
 
@@ -1108,21 +1109,21 @@
                          <div class="footer-thumb">
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">빠른 링크</h4>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="index.html#about">
                                              <h5>의료진 소개</h5>
                                         </a>
                                    </div>
                               </div>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="index.html#news">
                                              <h5>주요 진료 과목</h5>
                                         </a>
                                    </div>
                               </div>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="tel:0313787522">
                                              <h5>전화 예약하기</h5>
                                         </a>
@@ -1151,20 +1152,19 @@
 
                     <div class="col-md-12 col-sm-12 border-top">
                          <div class="col-md-9 col-sm-9">
-                              <div class="clinic-legal-info" style="font-size: 13px; line-height: 1.9; color: #777;">
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">의료기관 명칭</strong> : 연세레이크치과의원
-                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
-                                        <strong style="color:#555;">대표자 성명</strong> : 김태원
+                              <div class="clinic-legal-info">
+                                   <p>
+                                        <strong>의료기관 명칭</strong> : 연세레이크치과의원
+                                        <span class="clinic-legal-sep">|</span>
+                                        <strong>대표자 성명</strong> : 김태원
                                    </p>
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
+                                   <p>
+                                        <strong>의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
                                    </p>
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">사업자등록번호</strong> : 578-07-03168
-                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
-                                        <a href="nonpay.html"
-                                             style="color:#392679; font-weight:700; text-decoration: underline;">비급여 수가표
+                                   <p>
+                                        <strong>사업자등록번호</strong> : 578-07-03168
+                                        <span class="clinic-legal-sep">|</span>
+                                        <a href="nonpay.html">비급여 수가표
                                              보기</a>
                                    </p>
                               </div>
@@ -1180,15 +1180,6 @@
                </div>
           </div>
      </footer>
-
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.sticky.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
 
 </body>
 

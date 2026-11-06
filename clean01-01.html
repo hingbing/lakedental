@@ -8,13 +8,12 @@
      <meta name="description" content="연세레이크치과 임플란트 진료 안내. 정밀 진단, 맞춤 치료 계획, 보철 제작과 사후관리까지 환자 상태에 맞춰 안내합니다.">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
      <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
      <link rel="stylesheet" href="css/tooplate-style.css">
+     <link rel="stylesheet" href="css/lake-common.css">
 
      <style>
           :root {
@@ -80,17 +79,6 @@
                }
           }
 
-          @keyframes fadeInDown {
-               from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-               }
-
-               to {
-                    opacity: 1;
-                    transform: translateY(0);
-               }
-          }
 
           #implant-detail {
                padding: 64px 0;
@@ -516,6 +504,12 @@
                color: #ffffff !important;
           }
 
+          @media (min-width: 992px) {
+               .side-col {
+                    margin-bottom: 42px;
+               }
+          }
+
           @media (max-width: 991px) {
 
                .hero-point-list,
@@ -572,6 +566,13 @@
                }
           }
      </style>
+     <script src="js/jquery.js" defer></script>
+     <script src="js/bootstrap.min.js" defer></script>
+     <script src="js/jquery.sticky.js" defer></script>
+     <script src="js/jquery.stellar.min.js" defer></script>
+     <script src="js/wow.min.js" defer></script>
+     <script src="js/smoothscroll.js" defer></script>
+     <script src="js/custom.js" defer></script>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -673,7 +674,7 @@
                          <div class="implant-hero wow fadeInUp" data-wow-delay="0.1s">
                               <div class="hero-image">
                                    <!-- 대표 이미지 교체 위치: images/implant_main.jpg -->
-                                   <img src="images/implant_main.jpg" alt="연세레이크치과 임플란트 진료 안내 이미지">
+                                   <img src="images/implant_main.jpg" alt="연세레이크치과 임플란트 진료 안내 이미지" loading="lazy" decoding="async">
                               </div>
                               <div class="hero-copy">
                                    <span class="eyebrow">YONSEI LAKE IMPLANT</span>
@@ -741,8 +742,8 @@
                                    연세레이크치과는 환자분의 상태와 치료 계획에 맞는 임플란트 재료를 안내하고, 필요한 경우 정품 확인 및 사후관리 정보를 함께 제공합니다.
                               </p>
                               <div class="section-image">
-                                   <!-- 임플란트 재료 이미지 교체 위치: images/implant_osstem.png -->
-                                   <img src="images/implant_osstem.png" alt="정품 임플란트 재료 안내 이미지" loading="lazy">
+                                   <!-- 임플란트 재료 이미지 교체 위치: images/implant_osstem.jpg -->
+                                   <img src="images/implant_osstem.jpg" alt="정품 임플란트 재료 안내 이미지" loading="lazy">
                               </div>
                               <ul class="info-list">
                                    <li><i class="fa fa-angle-right"></i> 환자분의 잇몸뼈 상태와 치아 위치에 맞춘 재료 선택</li>
@@ -908,21 +909,21 @@
                          <div class="footer-thumb">
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">빠른 링크</h4>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="index.html#about">
                                              <h5>의료진 소개</h5>
                                         </a>
                                    </div>
                               </div>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="index.html#news">
                                              <h5>주요 진료 과목</h5>
                                         </a>
                                    </div>
                               </div>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="tel:0313787522">
                                              <h5>전화 예약하기</h5>
                                         </a>
@@ -951,20 +952,19 @@
 
                     <div class="col-md-12 col-sm-12 border-top">
                          <div class="col-md-9 col-sm-9">
-                              <div class="clinic-legal-info" style="font-size: 13px; line-height: 1.9; color: #777;">
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">의료기관 명칭</strong> : 연세레이크치과의원
-                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
-                                        <strong style="color:#555;">대표자 성명</strong> : 김태원
+                              <div class="clinic-legal-info">
+                                   <p>
+                                        <strong>의료기관 명칭</strong> : 연세레이크치과의원
+                                        <span class="clinic-legal-sep">|</span>
+                                        <strong>대표자 성명</strong> : 김태원
                                    </p>
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
+                                   <p>
+                                        <strong>의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
                                    </p>
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">사업자등록번호</strong> : 578-07-03168
-                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
-                                        <a href="nonpay.html"
-                                             style="color:#392679; font-weight:700; text-decoration: underline;">비급여 수가표
+                                   <p>
+                                        <strong>사업자등록번호</strong> : 578-07-03168
+                                        <span class="clinic-legal-sep">|</span>
+                                        <a href="nonpay.html">비급여 수가표
                                              보기</a>
                                    </p>
                               </div>
@@ -980,15 +980,6 @@
                </div>
           </div>
      </footer>
-
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.sticky.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
 
 </body>
 

@@ -1,0 +1,83 @@
+/* 연세레이크치과 공통 CSS (모든 페이지 공용) */
+
+/* animate.css에서 실제로 쓰는 것만 (wow.js의 fadeInUp, 메인 슬라이더 owl의 fadeOut)
+   Animate.css - http://daneden.me/animate - MIT License - Copyright (c) 2014 Daniel Eden */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+/* 상단 메뉴: PC 화면(768px 이상)에서 마우스 올리면 드롭다운 표시
+   (clean01-01, clean06, room-detail, soi는 각 페이지 <style>에서 0.25s로 덮어씀) */
+@media (min-width: 768px) {
+  .navbar-nav>li.dropdown:hover>.dropdown-menu {
+    display: block;
+    animation: fadeInDown 0.3s ease forwards;
+  }
+}
+
+/* 드롭다운이 부드럽게 나타나는 효과 */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 푸터 하단 의료기관 정보 (의료기관 명칭·주소·사업자등록번호·비급여 수가표 링크) */
+.clinic-legal-info {
+  font-size: 13px;
+  line-height: 1.9;
+  color: #777;
+}
+
+.clinic-legal-info p {
+  margin: 0;
+}
+
+.clinic-legal-info strong {
+  color: #555;
+}
+
+.clinic-legal-sep {
+  display: inline-block;
+  margin: 0 8px;
+  color: #aaa;
+}
+
+.clinic-legal-info a,
+.clinic-legal-info a:hover {
+  color: #392679;
+  font-weight: 700;
+  text-decoration: underline;
+}
