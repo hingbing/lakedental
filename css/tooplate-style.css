@@ -6,8 +6,6 @@ http://www.tooplate.com/view/2098-health
 
 */
 
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-
 body {
   background: #ffffff;
   font-family:
@@ -142,10 +140,6 @@ a:focus {
   text-align: right;
 }
 
-.text-align-center {
-  text-align: center;
-}
-
 .border-top {
   border-top: 1px solid #f2f2f2;
   margin-top: 4em;
@@ -210,8 +204,7 @@ a:focus {
   padding-bottom: 100px;
 }
 
-#news,
-#service {
+#news {
   text-align: center;
 }
 
@@ -473,7 +466,7 @@ header span i {
 }
 
 .slider .item-second {
-  background-image: url(../images/im04-01.png);
+  background-image: url(../images/im04-01.jpg);
 }
 
 .slider .item-third {
@@ -490,22 +483,6 @@ header span i {
     padding-top: 150px;
     padding-bottom: 150px;
   }*/
-
-.profile img,
-.profile figcaption {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 1em;
-}
-.profile img {
-  border-radius: 100%;
-  width: 65px;
-  height: 65px;
-  margin-right: 1em;
-}
-.profile figcaption h3 {
-  margin-top: 0;
-}
 
 #about h6 {
   color: #858585;
@@ -578,38 +555,6 @@ header span i {
 }
 
 /*---------------------------------------
-     SERVICE              
-  -----------------------------------------*/
-
-#service {
-  background: #a5c422;
-}
-
-#service h2,
-#service h4 {
-  color: #ffffff;
-}
-
-#service p {
-  color: #d9d9d9;
-}
-
-#service .service-thumb {
-  padding: 0 22px;
-}
-
-#service .fa {
-  font-size: 50px;
-  margin-bottom: 10px;
-  background: #ffffff;
-  color: #a5c422;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
-  border-radius: 100%;
-}
-
-/*---------------------------------------
       NEWS             
   -----------------------------------------*/
 
@@ -651,151 +596,6 @@ header span i {
 
 .news-sidebar {
   margin-top: 16px;
-}
-
-.news-social-share {
-  text-align: center;
-  padding-top: 22px;
-}
-
-.news-social-share .btn {
-  border-radius: 100px;
-  border: none;
-  font-size: 10px;
-  font-weight: 600;
-  margin: 2px 6px;
-  padding: 8px 14px;
-}
-
-.news-social-share .btn-primary {
-  background: #3b5998;
-}
-
-.news-social-share .btn-success {
-  background: #1da1f2;
-}
-
-.news-social-share .btn-danger {
-  background: #dd4b39;
-}
-
-.news-social-share a .fa {
-  padding-right: 4px;
-}
-
-.recent-post {
-  padding-top: 2px;
-  padding-bottom: 18px;
-}
-
-.recent-post .media img {
-  border-radius: 100%;
-  width: 80px;
-  height: 80px;
-  margin-right: 5px;
-}
-
-.recent-post .media-heading {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: inherit;
-  margin-top: 5px;
-}
-
-.news-categories {
-  margin-top: 8px;
-}
-
-.news-categories li a {
-  color: #2b2b2b;
-}
-
-.news-ads {
-  background: #ffffff;
-  border-right: 4px solid #2b2b2b;
-  padding: 42px;
-  text-align: center;
-  margin: 26px 0 26px 0;
-}
-
-.news-ads.sidebar-ads {
-  border-left: 4px solid #2b2b2b;
-  border-right: 0px;
-}
-
-.news-ads h4 {
-  font-size: 18px;
-}
-
-.news-tags h4 {
-  padding-bottom: 6px;
-}
-
-.news-categories li,
-.news-tags li {
-  list-style: none;
-  display: inline-block;
-  margin: 4px;
-}
-
-.news-tags li a {
-  background: #393939;
-  border-radius: 50px;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 500;
-  text-decoration: none;
-  float: left;
-  min-width: 30px;
-  padding: 6px 12px;
-  -webkit-transition: all ease-in-out 0.4s;
-  transition: all ease-in-out 0.4s;
-}
-
-.news-tags li a:hover {
-  background: #4267b2;
-}
-
-/*---------------------------------------
-      APPOINTMENT             
-  -----------------------------------------*/
-
-#appointment {
-  padding-top: 100px;
-}
-
-#appointment label {
-  color: #393939;
-  font-weight: 500;
-}
-
-#appointment .form-control {
-  background: #f9f9f9;
-  border: none;
-  border-radius: 3px;
-  box-shadow: none;
-  font-size: 14px;
-  font-weight: normal;
-  margin-bottom: 15px;
-  transition: all ease-in-out 0.4s;
-}
-
-#appointment input,
-#appointment select {
-  height: 45px;
-}
-
-#appointment button#cf-submit {
-  background: #a5c422;
-  color: #ffffff;
-  font-weight: 600;
-  height: 55px;
-}
-
-#appointment button#cf-submit:hover {
-  background: #393939;
-  color: #ffffff;
 }
 
 /*---------------------------------------
@@ -846,16 +646,6 @@ footer a:hover {
   vertical-align: top;
 }
 
-.stories-image img {
-  border-radius: 100%;
-  width: 65px;
-  height: 65px;
-}
-
-.stories-info {
-  margin-left: 15px;
-}
-
 .stories-info h5 {
   margin-bottom: 2px;
 }
@@ -880,13 +670,6 @@ footer a:hover {
   color: #858585;
   font-size: 12px;
   font-weight: 500;
-}
-
-.footer-link a {
-  font-size: 12px;
-  display: inline-block;
-  padding: 0 10px;
-  margin-top: 4px;
 }
 
 .angle-up-btn {
@@ -972,9 +755,6 @@ footer a:hover {
     padding-right: 0;
     padding-left: 0;
   }
-  header span.email-icon {
-    padding-top: 0;
-  }
 
   .navbar-default .navbar-nav li a {
     padding-right: 15px;
@@ -1016,11 +796,6 @@ footer a:hover {
 
   .news-sidebar {
     margin-top: 2em;
-  }
-
-  #appointment-form {
-    padding-top: 4em;
-    padding-bottom: 4em;
   }
 
   footer {
@@ -1248,17 +1023,20 @@ footer a:hover {
    [드롭다운 하위 메뉴 가로 배치 + 위에서 아래로 스르륵 애니메이션]
    ========================================= */
 
-/* 1. 마우스를 올렸을 때 (스르륵 내려옴) */
-.navbar-nav .dropdown:hover .dropdown-menu {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translate(-50%, 0) !important;
-  pointer-events: auto !important;
+/* 1. 마우스를 올렸을 때 (스르륵 내려옴). PC 화면만: 모바일에서는 터치 후 :hover가 남아
+      서브메뉴가 다시 눌러도 닫히지 않으므로, 모바일은 .open 클래스로만 열고 닫음 */
+@media (min-width: 768px) {
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translate(-50%, 0) !important;
+    pointer-events: auto !important;
 
-  /* 🎯 높이를 200px -> 500px로 늘렸습니다. (글씨가 길어지거나 줄바꿈될 때 세로 잘림 방지) */
-  max-height: 500px !important;
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
+    /* 🎯 높이를 200px -> 500px로 늘렸습니다. (글씨가 길어지거나 줄바꿈될 때 세로 잘림 방지) */
+    max-height: 500px !important;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
 }
 
 /* 2. 평상시 숨겨져 있을 때 */
@@ -1350,12 +1128,6 @@ span {
   word-break: keep-all !important;
   overflow-wrap: break-word !important;
 }
-/* PC에서는 이 줄바꿈을 숨깁니다 */
-.mobile-br {
-  display: none !important;
-}
-
-/* 모바일 화면(767px 이하)에서는 이 줄바꿈을 작동시킵니다 */
 /* =========================================
    [모바일 화면 - 레이아웃 꼬임 방지 & 서브메뉴 적용]
    ========================================= */
@@ -1446,10 +1218,9 @@ span {
     transition: max-height 0.4s ease !important;
   }
 
-  /* 열렸을 때 (공간 확보) */
+  /* 열렸을 때 (공간 확보). 터치하면 :hover가 남아 다시 눌러도 안 닫히므로 hover는 쓰지 않고 .open으로만 열림 */
   .navbar-nav .open .dropdown-menu,
-  .navbar-nav .show .dropdown-menu,
-  .navbar-nav .dropdown:hover .dropdown-menu {
+  .navbar-nav .show .dropdown-menu {
     max-height: 500px !important;
   }
 

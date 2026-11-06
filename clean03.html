@@ -5,16 +5,15 @@
      <title>연세레이크치과 - 신경치료</title>
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-     <meta name="description" content="연세레이크치과 신경치료 및 자연치아 보존 진료 안내">
+     <meta name="description" content="연세레이크치과 신경치료 안내. 감염되거나 손상된 치아 내부 조직을 제거하고 근관을 세척·소독·밀폐해 자연치아 보존을 돕는 치료 과정과 치료 후 관리를 안내합니다.">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
      <link rel="stylesheet" href="css/bootstrap.min.css">
-     <link rel="stylesheet" href="css/magnific-popup.css">
      <link rel="stylesheet" href="css/font-awesome.min.css">
-     <link rel="stylesheet" href="css/animate.css">
-     <link rel="stylesheet" href="css/owl.carousel.css">
-     <link rel="stylesheet" href="css/owl.theme.default.min.css">
      <link rel="stylesheet" href="css/tooplate-style.css">
+     <link rel="stylesheet" href="css/lake-common.css">
 
      <style>
           :root {
@@ -45,12 +44,6 @@
                color: inherit;
           }
 
-          @media (min-width: 768px) {
-               .navbar-nav>li.dropdown:hover>.dropdown-menu {
-                    display: block;
-                    animation: fadeInDown 0.3s ease forwards;
-               }
-          }
 
           .dropdown-menu {
                border-top: 3px solid var(--lake-primary);
@@ -75,17 +68,6 @@
                padding-left: 25px;
           }
 
-          @keyframes fadeInDown {
-               from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-               }
-
-               to {
-                    opacity: 1;
-                    transform: translateY(0);
-               }
-          }
 
           #root-canal-detail {
                padding: 60px 0;
@@ -499,6 +481,12 @@
                float: right;
           }
 
+          @media (min-width: 992px) {
+               .side-col {
+                    margin-bottom: 34px;
+               }
+          }
+
           @media (max-width: 991px) {
                .detail-row {
                     display: block;
@@ -552,6 +540,13 @@
                }
           }
      </style>
+     <script src="js/jquery.js" defer></script>
+     <script src="js/bootstrap.min.js" defer></script>
+     <script src="js/jquery.sticky.js" defer></script>
+     <script src="js/jquery.stellar.min.js" defer></script>
+     <script src="js/wow.min.js" defer></script>
+     <script src="js/smoothscroll.js" defer></script>
+     <script src="js/custom.js" defer></script>
 </head>
 
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
@@ -668,7 +663,7 @@
 
                          <div class="implant-box no-card wow fadeInUp" data-wow-delay="0.15s">
                               <div class="news-image">
-                                   <img src="images/produce-03.png" class="img-responsive" alt="신경치료 진료 이미지"
+                                   <img src="images/produce-03.jpg" class="img-responsive" alt="신경치료 진료 이미지"
                                         loading="lazy">
                                    <p class="image-caption">치아 내부 감염 상태와 통증 원인을 확인한 뒤 필요한 치료 범위를 안내합니다.</p>
                               </div>
@@ -736,7 +731,7 @@
 
                          <div class="implant-box no-card wow fadeInUp" data-wow-delay="0.25s">
                               <div class="news-image">
-                                   <img src="images/im03-02.png" class="img-responsive" alt="신경치료 설명 이미지"
+                                   <img src="images/im03-02.jpg" class="img-responsive" alt="신경치료 설명 이미지"
                                         loading="lazy">
                               </div>
                          </div>
@@ -817,7 +812,7 @@
                                    <div class="col-md-6 col-sm-6 photo-item">
                                         <div class="photo-card">
                                              <!-- 사진 1 교체 위치: images/root_canal_ct.jpg -->
-                                             <img src="images/root_canal_ct.png" alt="신경치료 정밀 진단 장비" loading="lazy">
+                                             <img src="images/root_canal_ct.jpg" alt="신경치료 정밀 진단 장비" loading="lazy">
                                              <div class="photo-text">
                                                   <h4>꼼꼼한 진단</h4>
                                                   <p>증상과 치아 상태를 함께 확인해 필요한 치료 범위를 안내합니다.</p>
@@ -908,21 +903,21 @@
                          <div class="footer-thumb">
                               <h4 class="wow fadeInUp" data-wow-delay="0.4s">빠른 링크</h4>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="index.html#about">
                                              <h5>의료진 소개</h5>
                                         </a>
                                    </div>
                               </div>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="index.html#news">
                                              <h5>주요 진료 과목</h5>
                                         </a>
                                    </div>
                               </div>
                               <div class="latest-stories">
-                                   <div class="stories-info" style="margin-left: 0;">
+                                   <div class="stories-info">
                                         <a href="tel:0313787522">
                                              <h5>전화 예약하기</h5>
                                         </a>
@@ -951,20 +946,19 @@
 
                     <div class="col-md-12 col-sm-12 border-top">
                          <div class="col-md-9 col-sm-9">
-                              <div class="clinic-legal-info" style="font-size: 13px; line-height: 1.9; color: #777;">
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">의료기관 명칭</strong> : 연세레이크치과의원
-                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
-                                        <strong style="color:#555;">대표자 성명</strong> : 김태원
+                              <div class="clinic-legal-info">
+                                   <p>
+                                        <strong>의료기관 명칭</strong> : 연세레이크치과의원
+                                        <span class="clinic-legal-sep">|</span>
+                                        <strong>대표자 성명</strong> : 김태원
                                    </p>
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
+                                   <p>
+                                        <strong>의료기관 소재지 주소</strong> : 경기 화성시 동탄대로 181 레이크꼬모 310호
                                    </p>
-                                   <p style="margin: 0;">
-                                        <strong style="color:#555;">사업자등록번호</strong> : 578-07-03168
-                                        <span style="display:inline-block; margin: 0 8px; color:#aaa;">|</span>
-                                        <a href="nonpay.html"
-                                             style="color:#392679; font-weight:700; text-decoration: underline;">비급여 수가표
+                                   <p>
+                                        <strong>사업자등록번호</strong> : 578-07-03168
+                                        <span class="clinic-legal-sep">|</span>
+                                        <a href="nonpay.html">비급여 수가표
                                              보기</a>
                                    </p>
                               </div>
@@ -980,15 +974,6 @@
                </div>
           </div>
      </footer>
-
-     <script src="js/jquery.js"></script>
-     <script src="js/bootstrap.min.js"></script>
-     <script src="js/jquery.sticky.js"></script>
-     <script src="js/jquery.stellar.min.js"></script>
-     <script src="js/wow.min.js"></script>
-     <script src="js/smoothscroll.js"></script>
-     <script src="js/owl.carousel.min.js"></script>
-     <script src="js/custom.js"></script>
 
 </body>
 
